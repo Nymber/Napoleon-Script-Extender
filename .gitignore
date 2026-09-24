@@ -1,0 +1,14 @@
+# build artifacts - the DLL is the only thing worth keeping in bin/
+bin/*.pdb
+bin/*.lib
+bin/*.exp
+src/*.pdb
+src/*.lib
+src/*.obj
+src/dinput8.dll
+
+# not ours to redistribute - see NOTICE.md
+tools/master_schema.xml
+
+# produced by a running game
+nse_log.txt

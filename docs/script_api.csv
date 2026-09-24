@@ -1,0 +1,1135 @@
+namespace,name,func,author,scope,usage,description,parameters
+conditions - queries you may call from campaign script,AdjacentRegionRebelling,0089A840,Ed,,AdjacentRegionRebelling(),Are any of the regions adjacent to the region rebelling,none
+conditions - queries you may call from campaign script,AdviceDisplayed,00E0CC30,Guy,,"AdviceDisplayed(""-1890476358"")",Has a piece of advice been seen since this game session started,Key from advice_levels table
+conditions - queries you may call from campaign script,AdviceJustDisplayed,00E0CCD0,Guy,,"AdviceJustDisplayed(""-1890476358"")","The name of the advisory issued or dismissed, as described in the key field of the advice level record",None
+conditions - queries you may call from campaign script,AdviceThreadProgress,00E0CD80,Guy,,"AdviceThreadProgress(""0001_Battle_Advice_Friendly_Fire_thread"")",How much progress has been made through the named thread,Key from advice_threads table
+conditions - queries you may call from campaign script,ArmyIsAlliedCampaign,0089A900,Ed,,ArmyIsAlliedCampaign(),Does the army belong to a faction allied to the player faction,none
+conditions - queries you may call from campaign script,ArmyIsLocalCampaign,0089A990,Ed,,ArmyIsLocalCampaign(),Does the army belong to the player faction?,none
+conditions - queries you may call from campaign script,BattleAllianceIsAttacker,0052A280,Ingimar,,BattleAllianceIsAttacker(),Returns true if the alliance is the attacker from the campaign map,No parameters needed
+conditions - queries you may call from campaign script,BattleAllianceIsPlayers,0052A350,Ingimar,,BattleAllianceIsPlayers(),Returns true if the alliance contains the players army,No parameters needed
+conditions - queries you may call from campaign script,BattleAllianceNumberOfShips,0052A400,Ingimar,,BattleAllianceNumberOfShips(),Returns the number of ships in all the armies of the alliance,No parameters needed
+conditions - queries you may call from campaign script,BattleAllianceNumberOfUnits,0052A470,Ingimar,,BattleAllianceNumberOfUnits(),Returns the number of units in all the armies of the alliance,No parameters needed
+conditions - queries you may call from campaign script,BattleCommanderIsGeneral,0052A4E0,Ingimar,,BattleCommanderIsGeneral(),Returns true if the the alliance has a general and not just a colonel,No parameters needed
+conditions - queries you may call from campaign script,BattleEnemyAlliancePercentageCanHide,0052A5D0,Ingimar,,BattleEnemyAlliancePercentageCanHide(),"Checks the percentage of enemy units ( in alliance ) that can hide, returns a percentage",No parameters needed
+conditions - queries you may call from campaign script,BattleEnemyAlliancePercentageOfClassAndCategory,0052A6D0,Ingimar,,"BattleEnemyAlliancePercentageOfClassAndCategory(""class"", ""category"")","Takes in class and category of a particular unit and goes through every enemy army, returning the percentage of units that match the class and category","Two lowercase strings, first being the particular class string ( see unit_stats_land table ) and second being the category string ( see units table )"
+conditions - queries you may call from campaign script,BattleEnemyAlliancePercentageOfMountType,0052A8B0,Ingimar,,"BattleEnemyAlliancePercentageOfMountType(""mount_type"")",Determine the percentage of units in the enemies army that have the type of mount passed to the condition,A lowercase string with the unit's mount type to be checked ( see type in battle_entities table )
+conditions - queries you may call from campaign script,BattleEnemyAlliancePercentageOfSpecialAbility,0052AA20,Ingimar,,"BattleEnemyAlliancePercentageOfSpecialAbility(""ability"")",Checks all of the Armies in the enemy alliances for the particular special ability,""
+conditions - queries you may call from campaign script,BattleEnemyAlliancePercentageOfUnitCategory,0052AB60,Ingimar,,"BattleEnemyAlliancePercentageOfUnitCategory(""category"")",Take in the name of the unit's category and returns the percentage of units in the alliance that match the given category,One lowercase string with the unit's category name ( see units table )
+conditions - queries you may call from campaign script,BattleEnemyAlliancePercentageOfUnitClass,0052AD40,Ingimar,,"BattleEnemyAlliancePercentageOfUnitClass(""class"")",Takes in the name of the unit's class and returns the percentage of units in the alliance that match the given class,One lowercase string with the unit's class name ( see unit_stats_land table )
+conditions - queries you may call from campaign script,BattleEnemyDirectionOfMeleeAttack,0052AF20,Ingimar,,"BattleEnemyDirectionOfMeleeAttack(""left_flank"")",Returns true if the passed parameter matches the direction of melee attack for the enemy unit,"Possible string paramaters are ""front"", ""left_flank"", ""right_flank"" and ""behind"""
+conditions - queries you may call from campaign script,BattleEnemyHasMissileSuperiority,0052B030,Ingimar,,BattleEnemyHasMissileSuperiority(),Returns true if the combined missile streangth of the enemy is greater than the missile streangth of the player,No paramaters needed
+conditions - queries you may call from campaign script,BattleEnemyShipActionStatus,0052B3E0,Ingimar,,BattleEnemyShipActionStatus,"Returns true if the action status of the enemy ship matches : dismasted, firing, hull_damaged, routing, sinking, wavering.",Single string with action status
+conditions - queries you may call from campaign script,BattleEnemyShipOnFire,0052B4D0,Ingimar,,BattleEnemyShipOnFire(),"Checks whether any of the enemies ships are on fire, returns true or false",No parameters needed
+conditions - queries you may call from campaign script,BattleEnemyUnitActionStatus,0052B600,Ingimar,,"BattleEnemyUnitActionStatus(""hiding"")","Returns true if the action status of the enemy unit matches : charging, exhausted, fighting_melee, firing, hiding, idling moving, moving_fast, pursue_routers, rallying, routing, wavering.",Single string with action status
+conditions - queries you may call from campaign script,BattleEnemyUnitCategory,0052B6C0,Ingimar,,"BattleEnemyUnitCategory(""category"")",Takes in a unit category string and returns true if there is an enemy and it matches the category of the enemy unit,One lowercase string with the enemies unit's category name ( see units table )
+conditions - queries you may call from campaign script,BattleEnemyUnitClass,0052B7B0,Ingimar,,"BattleEnemyUnitClass(""class"")",Takes in a unit class string and returns true if it matches the unit class of the enemy unit,One lowercase string with the unit's class name ( see unit_stats_land table )
+conditions - queries you may call from campaign script,BattleEnemyUnitCurrentFormation,0052B890,Ingimar,,,"Returns true if the unit has an enemy and the string matches the current formation employed by the enemy, otherwise it returns false","Takes in a single string which can be one of the following : block_formation, pike_square_formation, pike_wall_formation, square_formation, diamond_formation, wedge_formation, light_infantry_behaviour."
+conditions - queries you may call from campaign script,BattleEnemyUnitOnLeftFlank,0052B980,Ingimar,,BattleEnemyUnitOnLeftFlank(),Returns true if there's an enemy unit on the left flank,No parameters needed
+conditions - queries you may call from campaign script,BattleEnemyUnitOnRightFlank,0052BA00,Ingimar,,BattleEnemyUnitOnRightFlank(),Returns true if there's an enemy unit on the right flank,No parameters needed
+conditions - queries you may call from campaign script,BattleEnemyUnitSpecialAbilitySupported,0052BA80,Ingimar,,"BattlePlayerUnitSpecialAbilitySupported(""ability"")",If there is an enemy unit then the condition checks all of the enemy unit's special abilities and returns true if the unit has the special ability,""
+conditions - queries you may call from campaign script,BattleEnemyUnitTechnologySupported,0052BB70,Ingimar,,"BattleEnemyUnitTechnologySupported(""ring_bayonets"")",Checks whether the unit has the technology passed in and returns true if the unit has the technology,"Technology string : ring_bayonets, socket_bayonets, fire_mounted"
+conditions - queries you may call from campaign script,BattleHasCoverBuildings,0052BC30,Ingimar,,BattleHasCoverBuildings(),Returns true if it finds an occupiable building,No parameters needed
+conditions - queries you may call from campaign script,BattleHasCoverWalls,0052BCE0,Ingimar,,BattleHasCoverWalls(),Returns true if the battlefield has walls that the men can take cover against,No parameters needed
+conditions - queries you may call from campaign script,BattleIsLandConflict,0052BD60,Ingimar,,BattleIsLandConflict(),Returns true if battle is being fought on land (this will NOT return true for fort battles),No parameters needed
+conditions - queries you may call from campaign script,BattleIsNavalConflict,0052BE00,Ingimar,,BattleIsNavalConflict(),Returns true if battle is being fought on sea,No parameters needed
+conditions - queries you may call from campaign script,BattleIsSiegeConflict,0052BE90,Ingimar,,BattleIsSiegeConflict(),Returns true if there is a fort in the battle,No parameters needed
+conditions - queries you may call from campaign script,BattlePlayerAllianceDefendingHill,0052BF20,Ingimar,,BattlePlayerAllianceDefendingHill(),Returns true if a unit in the alliance is stationed on a hill,No parameters needed
+conditions - queries you may call from campaign script,BattlePlayerAlliancePercentageCanHide,0052BFF0,Ingimar,,BattlePlayerAlliancePercentageCanHide(),"Checks the percentage of player units ( in alliance ) that can hide, returns a percentage",No parameters needed
+conditions - queries you may call from campaign script,BattlePlayerAlliancePercentageGuerrillas,0052C060,Scott,,BattlePlayerAlliancePercentageGuerrillas,Goes through the players alliance and searches for all the units that have guerrilla deployment,A single string representing the class of a unit ( see unit_stats_land table )
+conditions - queries you may call from campaign script,BattlePlayerAlliancePercentageOfAmmoType,0052C180,Ingimar,,"BattlePlayerAlliancePercentageOfAmmoType(""bullet"")",Returns the percentage of units in the alliance that have the specified ammo type,Takes in a string describing the shottype ( see projectile_shot_type_enum_table )
+conditions - queries you may call from campaign script,BattlePlayerAlliancePercentageOfClassAndCategory,0052C310,Ingimar,,"BattlePlayerAlliancePercentageOfClassAndCategory(""class"", ""category"")",Takes in Class and Category of a particular unit and goes through players army and returns the percentage that match the class and category,"Two lowercase strings, first being the particular class string (see unit_stats_land table ) and second being the category string ( see units table )"
+conditions - queries you may call from campaign script,BattlePlayerAlliancePercentageOfMountType,0052C4A0,Ingimar,,"BattlePlayerPercentageOfMountType(""mount_type"")",Determine the percentage of units in the players army that have the type of mount passed to the condition,A lowercase string with the unit's mount type to be checked ( see type in battle_entities table )
+conditions - queries you may call from campaign script,BattlePlayerAlliancePercentageOfSpecialAbility,0052C5B0,Ingimar,,"BattlePlayerAlliancePercentageOfSpecialAbility(""ability"")",Checks all of the Armies in the players alliance for the special ability,""
+conditions - queries you may call from campaign script,BattlePlayerAlliancePercentageOfTechnology,0052C660,Ingimar,,"BattlePlayerAlliancePercentageOfTechnology(""ring_bayonets"")",Checks all of the Armies in the players alliance for the technology and returns the percentage of those that have it,"Technology string : ring_bayonets, socket_bayonets, fire_mounted"
+conditions - queries you may call from campaign script,BattlePlayerAlliancePercentageOfUnitCategory,0052C7A0,Ingimar,,"BattlePlayerAlliancePercentageOfUnitCategory(""category"")",Goes through the players alliance and searches for all the units that fit the given category description,A single string representing the category of a unit ( see units table )
+conditions - queries you may call from campaign script,BattlePlayerAlliancePercentageOfUnitClass,0052C930,Ingimar,,"BattlePlayerAlliancePercentageOfUnitClass(""class"")",Goes through the players alliance and searches for all the units that fit the given class description,A single string representing the class of a unit ( see unit_stats_land table )
+conditions - queries you may call from campaign script,BattlePlayerAllianceToEnemyAllianceRatio,0052CAC0,Ingimar,,BattlePlayerAllianceToEnemyAllianceRatio() > 0.5 would mean that the players alliance has half as many men as the enemy's alliance,Returns the ratio PlayersAlliance/EnemyAlliance in terms of men on the battlefield,No parameters needed
+conditions - queries you may call from campaign script,BattlePlayerDefendingFort,0052CD40,Ingimar,,BattlePlayerDefendingFort(),Returns true if player is still in control of the fort and is tasked to defend it.,No parameters needed
+conditions - queries you may call from campaign script,BattlePlayerDirectionOfMeleeAttack,0052CE50,Ingimar,,"BattlePlayerDirectionOfMeleeAttack(""left_flank"")",Returns true if the passed parameter matches the direction of melee attack for the unit,"Possible string paramaters are ""front"", ""left_flank"", ""right_flank"" and ""behind"""
+conditions - queries you may call from campaign script,BattlePlayerDirectionOfMissileAttack,0052CF30,Ingimar,,"BattlePlayerDirectionOfMissileAttack(""right_flank"")",Returns true if the passed parameter matches the direction of missile attack for the unit,"Possible string paramaters are ""front"", ""left_flank"", ""right_flank"" and ""behind"""
+conditions - queries you may call from campaign script,BattlePlayerSailsPercentageDamaged,0052D040,Ingimar,,BattlePlayerSailsPercentageDamaged(),Returns the floating point value of percentage damaged in the range 0.0 to 100.0,No parameters needed
+conditions - queries you may call from campaign script,BattlePlayerShipActionStatus,0052D0C0,Ingimar,,"BattlePlayerShipActionStatus(""hiding"")","Returns true if the action status of the ship : dismasted, firing, hull_damaged, routing, sinking, wavering.",Single string with action status
+conditions - queries you may call from campaign script,BattlePlayerShipClass,0052D160,Ingimar,,"BattlePlayerShipClass(""class"")",Takes in a ship class and returns true if it matches the ship class of the ship,One lowercase string with the unit's class name ( see unit_stats_naval table )
+conditions - queries you may call from campaign script,BattlePlayerUnitActionStatus,0052D220,Ingimar,,"BattlePlayerUnitActionStatus(""hiding"")","Returns true if the action status of the unit matches UNIT: charging, exhausted, fighting_melee, firing, hiding, idling moving, moving_fast, pursue_routers, rallying, routing, wavering.",Single string with action status
+conditions - queries you may call from campaign script,BattlePlayerUnitAmmoType,0052D2C0,Ingimar,,"BattlePlayerUnitAmmoType(""bullet"")",Returns true if the unit has the ammo type,Takes in a string describing the shottype ( see projectile_shot_type_enum table )
+conditions - queries you may call from campaign script,BattlePlayerUnitCategory,0052D380,Ingimar,,"BattlePlayerUnitCategory(""category"")",Takes in a unit category string and returns true if it matches the unit category of the unit,One lowercase string with the unit's category name ( see units table )
+conditions - queries you may call from campaign script,BattlePlayerUnitClass,0052D440,Ingimar,,"BattlePlayerUnitClass(""class"")",Takes in a unit class string and returns true if it matches the unit class of the unit,One lowercase string with the unit's class name ( see unit_stats_land table )
+conditions - queries you may call from campaign script,BattlePlayerUnitCurrentFormation,0052D500,Ingimar,,"BattlePlayerUnitCurrentFormation( ""pike_square_formation"" )","Returns true if the string matches the current formation employed, otherwise it returns false","Takes in a single string which can be one of the following : block_formation, pike_square_formation, pike_wall_formation, square_formation, diamond_formation, wedge_formation, light_infantry_behaviour."
+conditions - queries you may call from campaign script,BattlePlayerUnitDefendingHill,0052D5C0,Ingimar,,BattlePlayerUnitDefendingHill(),Returns true if a unit is stationed on a hill,No paramaters needed
+conditions - queries you may call from campaign script,BattlePlayerUnitEngaged,0052D6A0,Ingimar,,BattlePlayerUnitEngaged(),Returns true if a unit is either in a firefight or melee,No parameters needed
+conditions - queries you may call from campaign script,BattlePlayerUnitEngagedInMelee,0052D630,Ingimar,,BattlePlayerUnitEngagedInMelee(),Returns true if a unit is in a melee fight,No parameters needed
+conditions - queries you may call from campaign script,BattlePlayerUnitMountType,0052D760,Ingimar,,"BattlePlayerUnitMountClass(""mount_type"")",Determines whether the unit is mounted on the type of mount passed to the condition,A lowercase string with the unit's mount type to be checked ( see type in battle_entities ) table
+conditions - queries you may call from campaign script,BattlePlayerUnitMovingFast,0052D830,Ingimar,,BattlePlayerUnitMovingFast(),"Returns true if the unit is moving fast, otherwise false",No parameters needed
+conditions - queries you may call from campaign script,BattlePlayerUnitSpecialAbilityActive,0052D8A0,Ingimar,,BattlePlayerUnitSpecialAbilityActive(),Checks whether the specified unit ability is active,""
+conditions - queries you may call from campaign script,BattlePlayerUnitSpecialAbilitySupported,0052D960,Ingimar,,"BattlePlayerUnitSpecialAbilitySupported(""ability"")",Checks all of the units special abilities and returns true if the unit has ability,""
+conditions - queries you may call from campaign script,BattlePlayerUnitTechnologySupported,0052DA20,Ingimar,,"BattlePlayerUnitTechnologySupported(""ring_bayonets"")",Checks whether the unit has the technology passed in and returns true if the unit has the technology,"Technology string : ring_bayonets, socket_bayonets, fire_mounted"
+conditions - queries you may call from campaign script,BattleResult,0089AA20,Luke,,"BattleResult(""decisive_victory"")",Returns true if the battle result matches the one supplied,"Result of the battle, e.g. ""crushing_defeat"", ""major_victory"", ""pyrrhic_victory"""
+conditions - queries you may call from campaign script,BattleShipIsPlayers,0052DAB0,Ingimar,,BattleShipIsPlayers,Returns true if the unit is part of the players army,No parameters needed
+conditions - queries you may call from campaign script,BattleShipSailsPercentageDamage,0052D040,Ingimar,,BattlePlayerShipSailsPercentageDamage(),Returns the percentile of damage the sails have recieved in the range 0.0 to 100.0,No parameters needed
+conditions - queries you may call from campaign script,BattleTimeLimitSet,0052DBF0,Ingimar,,BattleTimeLimitSet(),Returns true if there's an alliance in a the battle that will win on a timeout,No parameters needed
+conditions - queries you may call from campaign script,BattleType,0052DC80,Ingimar,,"BattleType(""normal"")",Returns true if the battle type matches the one supplied,"Battle type string : normal, land_normal, land_bridge, fort_standard, fort_sally, fort_relief, settlement_standard, settlement_sally, settlement_relief settlement_unfortified, town_normal, naval_normal, naval_blockade, naval_breakout. Please see designers for which of these are supported."
+conditions - queries you may call from campaign script,BattleUnitIsAllied,0052DD50,Ingimar,,BattleUnitIsAllied(),Returns true if the unit is part of the players alliance,No parameters needed
+conditions - queries you may call from campaign script,BattleUnitIsPlayers,0052DE10,Ingimar,,BattleUnitIsPlayers(),Returns true if the unit is part of the players army,No parameters needed
+conditions - queries you may call from campaign script,BattlesFought,0089AB90,Luke,,BattlesFought(),How many battles has this character fought in?,None
+conditions - queries you may call from campaign script,BuildingLevelName,00B01ED0,Guy,,BuildingLevelName(corn_peasant_farms),Flags whether or not the context contains the supplied building level record,String corresponding to level_name of supplied building level record
+conditions - queries you may call from campaign script,BuildingTypeExistsAtSettlement,0089ABE0,Ed,,"BuildingTypeExistsAtSettlement(""barracks"")",Tests if a building of the specified type exists in the region settlement,The key of the building level you are querying from the building_levels table
+conditions - queries you may call from campaign script,BuildingTypeExistsAtSlot,0089ACE0,Ed,,"BuildingTypeExistsAtSlot(""barracks"")",Tests if a building of the specified type exists in the region slot,The key of the building level you are querying from the building_levels table
+conditions - queries you may call from campaign script,CampaignBattleType,0089ADA0,Luke,,"CampaignBattleType(""normal"")",Returns true if the battle type matches the one supplied,"Battle type string : normal, land_normal, land_bridge, fort_standard, fort_sally, fort_relief, settlement_standard, settlement_sally, settlement_relief settlement_unfortified, town_normal, naval_normal, naval_blockade, naval_breakout. Please see designers for which of these are supported."
+conditions - queries you may call from campaign script,CampaignName,0089AEA0,Guy,,CampaignName('main'),Returns whether or not the current campaign name matches the supplied parameter,"Name of the campaign to compare against, from the campaigns table"
+conditions - queries you may call from campaign script,CampaignPercentageOfOwnCaptured,0089AF70,Luke,,CampaignPercentageOfOwnCaptured(),Percentage of own men/ships captured in the battle that just took place,None
+conditions - queries you may call from campaign script,CampaignPercentageOfOwnKilled,0089B090,Luke,,CampaignPercentageOfOwnKilled(),Percentage of own men/ships killed in the battle that just took place,None
+conditions - queries you may call from campaign script,CampaignPercentageOfOwnRouted,0089B1F0,Luke,,CampaignPercentageOfOwnRouted(),Percentage of own men/ships that routed in the battle that just took place,None
+conditions - queries you may call from campaign script,CampaignPercentageOfThemCaptured,0089B300,Luke,,CampaignPercentageOfThemCaptured(),Percentage of opposing men/ships captured in the battle that just took place,None
+conditions - queries you may call from campaign script,CampaignPercentageOfThemKilled,0089B420,Luke,,CampaignPercentageOfThemKilled(),Percentage of opposing men/ships killed in the battle that just took place,None
+conditions - queries you may call from campaign script,CampaignPercentageOfThemRouted,0089B580,Luke,,CampaignPercentageOfThemRouted(),Percentage of opposing men/ships that routed in the battle that just took place,None
+conditions - queries you may call from campaign script,CampaignPercentageOfUnitCategory,0089B690,Luke,,"CampaignPercentageOfUnitCategory(""naval_frigate"")",Percentage of type of ships/units under an admirals/generals command,None
+conditions - queries you may call from campaign script,CanGenerateHistoricalCharacter,0089B830,Paul,,"CanGenerateHistoricalCharacter(""abraham_de_moivre"")",,Historical character record key
+conditions - queries you may call from campaign script,CharacterAbility,0089BB10,Tom,,"CharacterAbility(""can_assassinate"")",Returns whether a character can perform the ability specified,Ability name (valid key from abilities table)
+conditions - queries you may call from campaign script,CharacterArmyCouldReplenishFromBattle,0089BBD0,Paul,,CharacterArmyCouldReplenishFromBattle(),Test to see if an army involved in the current pending battle and belonging to the player can replenish,None
+conditions - queries you may call from campaign script,CharacterArmyUsedCoverBuildings,0089BD00,Paul,,CharacterArmyUsedCoverBuildings(),Did the characters army use buildings for conver?,None
+conditions - queries you may call from campaign script,CharacterArmyUsedCoverWalls,0089BE10,Paul,,CharacterArmyUsedCoverWalls(),Did the characters army use walls for cover?,None
+conditions - queries you may call from campaign script,CharacterAttribute,0089BF20,Tom,,"CharacterAttribute(""command_land"") >= 2",Returns the value of the attribute specified.  This doesn't account for any given situation bonuses,Attribute name (valid key from agent_attributes table)
+conditions - queries you may call from campaign script,CharacterBattleWallsBreached,0089BFE0,Paul,,CharacterBattleWallsBreached(),Did the characters army breach the walls of a fort?,None
+conditions - queries you may call from campaign script,CharacterBuildingConstructed,0089C0F0,Luke,,"CharacterBuildingConstructed(""vineyards"")",Did this building type just get constructed?,The building type
+conditions - queries you may call from campaign script,CharacterCapturedEnemyShip,0089C190,Luke,,CharacterCapturedEnemyShip(),Did the given character capture an enemy ship?,None
+conditions - queries you may call from campaign script,CharacterCultureType,0089C240,Tom,,"CharacterCultureType(""tribal"")",Returns true if the character context is of the culture specified,Valid entry from 'key' field from cultures table in Empire.mdb
+conditions - queries you may call from campaign script,CharacterDuelWeapon,0089C350,Luke,,"CharacterDuelWeapon(""duelling_pistols"")",Did the given character use the given weapon in the duel?,none
+conditions - queries you may call from campaign script,CharacterDuelsFought,0089C430,Ed,,CharacterDuelsFought(),Number of duels a character has fought. Character context,None
+conditions - queries you may call from campaign script,CharacterDuelsLost,0089C4A0,Ed,,CharacterDuelsLost(),Number of duels a character has lost. Character context,None
+conditions - queries you may call from campaign script,CharacterDuelsWon,0089C510,Ed,,CharacterDuelsWon(),Number of duels a character has won. Character context,None
+conditions - queries you may call from campaign script,CharacterEndedInAmbushPosition,0089C580,Luke,,CharacterEndedInAmbushPosition(),"Returns true if the character is in an ambush position, as used in conjunction with out of mp this has just happened",none
+conditions - queries you may call from campaign script,CharacterFactionAdmiralCount,0089C5E0,Luke,,CharacterFactionAdmiralCount(),How many admirals does this characters faction have?,none
+conditions - queries you may call from campaign script,CharacterFactionGeneralCount,0089C690,Luke,,CharacterFactionGeneralCount(),How many generals does this characters faction have?,none
+conditions - queries you may call from campaign script,CharacterFactionHasTechType,0089C740,Luke,,"CharacterFactionHasTechType(""enlightenment_abolition_of_slavery"")",Does the characters faction have the specified technology,A valid key from the technologies table.
+conditions - queries you may call from campaign script,CharacterFactionMinisterAncillary,0089C860,Paul,,"CharacterFactionMinisterAncillary(""Ancillary_Boxer"")",Tests whether any minister in the characters faction has the specified ancillary,Ancillary name
+conditions - queries you may call from campaign script,CharacterFactionMinisterTrait,0089C990,Paul,,"CharacterFactionMinisterTrait(""drunkard"")",Tests whether any minister in the characters faction has the named trait,Trait name
+conditions - queries you may call from campaign script,CharacterFactionName,0089CAE0,Luke,,"CharacterFactionName(""britain"")",Is characters faction the one specified?,The db record key for the faction
+conditions - queries you may call from campaign script,CharacterFactionSubcultureType,0089CBA0,Luke,,"CharacterFactionSubcultureType(""sc_indian_islamic"")",Is the character part of the given subculture?,Subculture key
+conditions - queries you may call from campaign script,CharacterForename,0089CC30,Alan,,"CharacterForename(""names_name_names_irishAlan"")",Does the character have this forename?,The forename's db key
+conditions - queries you may call from campaign script,CharacterFoughtCulture,0089CCE0,Luke,,"CharacterFoughtCulture(""tribal"")",Has this character just fought this culture?,None
+conditions - queries you may call from campaign script,CharacterHasAncillary,0089CDF0,Paul,,"CharacterHasAncillary(""Ancillary_Boxer"")",Tests whether the character has the specified ancillary,Ancillary name
+conditions - queries you may call from campaign script,CharacterHasTrait,0089CF00,Luke,,"CharacterHasTrait(""drunkard"")",Does this character have the given trait?,The name of the trait
+conditions - queries you may call from campaign script,CharacterHoldsPost,0089D000,Luke,,CharacterHoldsPost(),Is this character a minister with a post?,None
+conditions - queries you may call from campaign script,CharacterInBuildingOfChain,0089D070,Luke,,"CharacterInBuildingOfChain(""tobacco"")",Is the character in a building of this chain type?,""
+conditions - queries you may call from campaign script,CharacterInBuildingType,0089D1F0,Luke,,"CharacterInBuildingType(""naval_college"")",Is the character in a building of this type?,""
+conditions - queries you may call from campaign script,CharacterInEnemyLands,0089D360,Luke,,CharacterInEnemyLands(),Is the character in enemy lands?,""
+conditions - queries you may call from campaign script,CharacterInHomeRegion,0089D3F0,Luke,,CharacterInHomeRegion(),Is the character in their home region?,""
+conditions - queries you may call from campaign script,CharacterInOwnFactionLands,0089D470,Luke,,CharacterInOwnFactionLands(),Is the character in their own factions lands?,""
+conditions - queries you may call from campaign script,CharacterInRegion,0089D500,Luke,,"CharacterInRegion(""england"")",Is the character in the given region?,The region key
+conditions - queries you may call from campaign script,CharacterInTheatre,0089D5B0,Ed,,"CharacterInTheatre(""-1133129049"")",Is the character in the specified theatre,none
+conditions - queries you may call from campaign script,CharacterIsAlliedCampaign,0089D6E0,Ed,,CharacterIsAllied(),The character is allied to the local faction?,None
+conditions - queries you may call from campaign script,CharacterIsEnemyCampaign,0089D770,Ed,,CharacterIsEnemy(),The character is an enemy of the local faction?,None
+conditions - queries you may call from campaign script,CharacterIsLocalCampaign,0089D800,Ed,,CharacterIsLocalCampaign(),Does the character belong to the player faction?,none
+conditions - queries you may call from campaign script,CharacterMPPercentageRemaining,0089D880,Tom,,CharacterMPPercentageRemaining() < 50,Returns the percentage of movement points remaining as in integer value,None
+conditions - queries you may call from campaign script,CharacterMinisterialPosition,0089D930,Luke,,"CharacterMinisterialPosition(""governor_europe"")",Does the character hold the specified ministerial position?,Ministerial position
+conditions - queries you may call from campaign script,CharacterNumberOfChildren,0089D9E0,Luke,,CharacterNumberOfChildren(),How many children does this character have?,None
+conditions - queries you may call from campaign script,CharacterRallied,0089DA80,Paul,,CharacterRallied(),Did the general rally at least one unit?,None
+conditions - queries you may call from campaign script,CharacterRouted,0089DBC0,Luke,,CharacterRouted(),Has the character routed? in the last battle?,None
+conditions - queries you may call from campaign script,CharacterRunsSpyNetwork,0089DD30,Paul,,CharacterRunsSpyNetwork(),Test to see if the character runs a spy network,None
+conditions - queries you may call from campaign script,CharacterStationaryForOneTurn,0089DDB0,Ed,,CharacterStationaryForOneTurn(),Was the character stationary last turn (or longer),None
+conditions - queries you may call from campaign script,CharacterSurname,0089DE20,Alan,,"CharacterSurname(""names_name_names_irishBlair"")",Does the character have this surname?,The surname's db key
+conditions - queries you may call from campaign script,CharacterTrait,0089DED0,Tom,,"CharacterTrait(""drunkard"") > 2",Returns the value of the specified trait (0 if not present),Trait name
+conditions - queries you may call from campaign script,CharacterTurnsAtHome,0089DFE0,Luke,,CharacterTurnsAtHome(),Returns the number of turns in home regions exclusively,""
+conditions - queries you may call from campaign script,CharacterTurnsAtSea,0089E030,Luke,,CharacterTurnsAtSea(),Returns the number of turns at sea exclusively,""
+conditions - queries you may call from campaign script,CharacterTurnsInEnemyLands,0089E080,Luke,,CharacterTurnsInEnemyLands(),Returns the number of turns in enemy regions exclusively,""
+conditions - queries you may call from campaign script,CharacterType,0089E0D0,Tom,,"CharacterType(""spy"")",Returns true if the character context is of the agent type specified,Valid entry from 'key' field from Agents table in Empire.mdb
+conditions - queries you may call from campaign script,CharacterWasAttacker,0089E190,Luke,,CharacterWasAttacker(),Was the character the attacker in the last battle?,none
+conditions - queries you may call from campaign script,CharacterWithdrewFromBattle,0089E220,Paul,,CharacterWithdrewFromBattle(),Did the characters army withdraw from battle?,None
+conditions - queries you may call from campaign script,CharacterWonBattle,0089E330,Ed,,CharacterWonBattle(),Is the character part of the winning alliance in a battle,None
+conditions - queries you may call from campaign script,CharacterWonDuel,0089E3C0,Luke,,CharacterWonDuel(),Did the given character win the Duel?,none
+conditions - queries you may call from campaign script,CharactersUnitRallied,0089E460,Paul,,CharactersUnitRallied(),Did the generals unit rally?,None
+conditions - queries you may call from campaign script,CommanderAncillary,0089E5A0,Luke,,"CommanderAncillary(""Ancillary_Boxer"")",Returns whether the commander has the specified ancillary,Ancillary name
+conditions - queries you may call from campaign script,CommanderFoughtInBattle,0089E670,Luke,,CommanderFoughtInBattle(),Did the characters unit fight in the battle? (melee or missile),None
+conditions - queries you may call from campaign script,CommanderFoughtInMelee,0089E7F0,Luke,,CommanderFoughtInMelee(),Did the characters unit engage in melee in the battle?,None
+conditions - queries you may call from campaign script,CommanderTrait,0089E960,Luke,,"CommanderTrait(""C_General_Mad"") > 2",Returns the value of the specified trait (0 if not present),Trait name
+conditions - queries you may call from campaign script,DateAndWeekInRange,0089EA40,Paul,,"DateAndWeekInRange(0, 1066, 47, 2001)",Test to see if the current calendar year and week in year is within the years and weeks specified.  Week should be 0 <= week < 48.  start <= current <= end,"Start Week, Start Year, End Week, End Year (Inclusive)"
+conditions - queries you may call from campaign script,DateInRange,0089EBA0,Paul,,"DateInRange(1066, 2001)",Test to see if the current calendar year is within the years specified.  start <= current <= end,"Start Year, End Year (Inclusive)"
+conditions - queries you may call from campaign script,DefensiveSiegesFought,0089EC50,Ed,,DefensiveSiegesFought(),Returns the number of siege defences a general has attempted,none
+conditions - queries you may call from campaign script,DefensiveSiegesWon,0089ECC0,Ed,,DefensiveSiegesWon(),Returns the number of siege defences a general has won,none
+conditions - queries you may call from campaign script,DifficultyLevel,0089ED30,Paul,,DifficultyLevel(),What is the local faction's difficulty level?,none
+conditions - queries you may call from campaign script,EnemyArmyGreaterCombatStrength,0089EDC0,Luke,,EnemyArmyGreaterCombatStrength(),Is the enemies army stronger than ours?,""
+conditions - queries you may call from campaign script,FactionAllyCount,0089EE60,Paul,,FactionAllyCount() > 2,Returns the number of allies the characters faction has,none
+conditions - queries you may call from campaign script,FactionBuildingExists,0089EF20,Paul K,,"FactionBuildingExists(""britain"", ""admiralty"")",Does the specified faction have at least one of the specified building,Parameter 1: A valid key from the factions table.  Parameter 2: A valid key from the building_levels table.
+conditions - queries you may call from campaign script,FactionCanBuildBuilding,0089F1C0,Ed,,"FactionCanBuildBuilding(""admiralty"")",Can the faction build the specified building at this point,The building key from the building levels table
+conditions - queries you may call from campaign script,FactionCashFlow,0089F3C0,Paul,,FactionCashFlow() > 10,Returns the percentage surplus/loss of the factions regular income and expenditure,none
+conditions - queries you may call from campaign script,FactionDestroyedByCharacterFaction,0089F4B0,Luke,,FactionDestroyedByCharacterFaction(),Did this characters faction destroy another faction this turn?,""
+conditions - queries you may call from campaign script,FactionExists,0089F520,Luke,,"FactionExists(""britain"")",Does the given faction exist?,The db record for the faction
+conditions - queries you may call from campaign script,FactionGovernmentType,0089F5D0,Ed,,"FactionGovernmentType(""gov_republic"")",Is the faction's government type equal to the passed government type,The government key from the government_types table
+conditions - queries you may call from campaign script,FactionHasAllies,0089F710,Paul,,FactionHasAllies(),Returns whether or not the characters faction has any allies,none
+conditions - queries you may call from campaign script,FactionHasTradeShipNotInTradeNode,0089F7C0,Ed,,FactionHasTradeShipNotInTradeNode(),Does the faction in context have a trade ship that is not in a trade node. Requires faction context,None
+conditions - queries you may call from campaign script,FactionIsAlliedCampaign,0089F8A0,Ed,,FactionIsAlliedCampaign(),Is the faction allied to the player faction?,None
+conditions - queries you may call from campaign script,FactionIsEnemyCampaign,0089F920,Ed,,"FactionIsEnemy(""france"")",Is the specified faction at war with the player faction?,Faction to query
+conditions - queries you may call from campaign script,FactionIsHuman,0089F9F0,Alan,,FactionIsHuman(),Is the faction human?,none
+conditions - queries you may call from campaign script,FactionIsLocal,0089FA60,Ed,,FactionIsLocal(),Is the faction the local faction?,none
+conditions - queries you may call from campaign script,FactionLeadersAttribute,0089FAE0,Luke,,"FactionLeadersAttribute(""management"")",Gets the level of the faction leaders attribute specified as a parameter,The attribute which you wish to check on the factions leader
+conditions - queries you may call from campaign script,FactionLeadersTrait,0089FBA0,Tom,,"FactionLeadersTrait(""drunkard"") > 2",Returns the value of the specified trait for the characters faction leader (0 if not present),Trait name
+conditions - queries you may call from campaign script,FactionName,0089FC90,Alan,,"FactionName(""britain"")",Is the faction the one specified?,The db record for the faction
+conditions - queries you may call from campaign script,FactionParticipatedInBattle,0089FD40,Ed,,"FactionParticipatedInBattle(""ita_french_republic"")",Did the specified faction participate in the battle?,Faction key of the faction to be queried
+conditions - queries you may call from campaign script,FactionPatrioticFervour,0089FE20,Luke,,FactionPatrioticFervour(),Does this faction have patriotic fervour?,""
+conditions - queries you may call from campaign script,FactionSupportCostsPercentage,0089FE90,Ed,,FactionSupportCostsPercentage(),What percentage of the factions expenditure is spent on army upkeep,none
+conditions - queries you may call from campaign script,FactionTaxLevel,0089FF20,Paul,,"FactionTaxLevel(""lower_classes"") < TaxLevel(""extortionate"")",Returns the average tax level for the faction,"""lower_classes"" or ""upper_classes"""
+conditions - queries you may call from campaign script,FactionTechExists,008A00B0,Paul K,,"FactionTechExists(""britain"", ""enlightenment_abolition_of_slavery"")",Does the specified faction have the specified technology,Parameter 1: A valid key from the factions table.  Parameter 2: A valid key from the technologies table.
+conditions - queries you may call from campaign script,FactionTradeCommodityExists,008A01F0,Paul,,"FactionTradeCommodityExists(""res_gold"")",Returns whether the faction has access to the trade resource,Valid entry from 'key' field from resources table in Empire.mdb
+conditions - queries you may call from campaign script,FactionTradeValue,008A0630,Paul,,FactionTradeValue() > 1000,Returns the absolute value of the factions global trade,none
+conditions - queries you may call from campaign script,FactionTradeValuePercentage,008A0450,Paul,,FactionTradeValuePercentage() > 25,Returns the percentage value of global trade owned by the faction,none
+conditions - queries you may call from campaign script,FactionTreasury,008A0860,Paul,,FactionTreasury() > 100,Returns the factions treasury value,none
+conditions - queries you may call from campaign script,FactionTreasuryWorldPercentage,008A0750,Paul,,FactionTreasuryWorldPercentage() > 10,Returns the characters factions treasury value as a percentage of the sum of all factions treasury values,none
+conditions - queries you may call from campaign script,FactionWarWeariness,008A08D0,Luke,,FactionWarWeariness(),Does this faction have war weariness?,""
+conditions - queries you may call from campaign script,FactionwideAncillaryTypeExists,008A0940,Tom,,"FactionwideAncillaryTypeExists(""unkillable_cat"") == true",Returns whether the named ancillary exists in the faction somewhere,Ancillary name
+conditions - queries you may call from campaign script,FortBuildingQueueIdleDespiteCash,008A0A40,Ed,,FortBuildingQueueIdleDespiteCash(),Is the fort's building queue empty even though the faction can afford to build the cheapest building?,none
+conditions - queries you may call from campaign script,FortIsLocal,008A0AF0,Luke,,FortIsLocal(),Does the fort belong to the player faction?,none
+conditions - queries you may call from campaign script,FortName,008A0B70,Ting,,"FortName(""Fort Duquesne"")",Returns if the passed fort name is equal to the fort's name,The name of the fort to check for
+conditions - queries you may call from campaign script,GovernorTaxLevel,008A0C30,Tom,,"GovernorTaxLevel(""upper"") >= 90",If the character is the governor returns the tax level set for the specified active class of that governorship.  Returns -1 if not.,none
+conditions - queries you may call from campaign script,GovernorshipEquals,008A0D30,Ed,,"GovernorshipEquals(""europe"")",Does the context's governorship key match the parameter,Key of the governorship to be queried 
+conditions - queries you may call from campaign script,GovernorshipTaxLevel,008A0DF0,Paul,,"GovernorshipTaxLevel(""europe"")",Returns the governorships tax level,Valid entry from 'governorship' field from governorships table in Empire.mdb
+conditions - queries you may call from campaign script,HasUnspecialisedPort,008A0F20,Paul,,HasUnspecialisedPort(),Does the region have a port with no building?,none
+conditions - queries you may call from campaign script,InPort,008A0FC0,Ed,,InPort(),Is the character in a port?,none
+conditions - queries you may call from campaign script,InSettlement,008A1030,Tom,,InSettlement(),Checks that a character is in a settlement,none
+conditions - queries you may call from campaign script,InsurrectionCrushed,008A1070,Luke,,InsurrectionCrushed(),Has the characters faction put down a rebellion in this turn (or the turn that is just ending),none
+conditions - queries you may call from campaign script,IsBesieging,008A10E0,Ed,,IsBesieging(),Is the character besieging?,none
+conditions - queries you may call from campaign script,IsBlockading,008A1150,Ed,,IsBlockading(),Is the character blockading?,none
+conditions - queries you may call from campaign script,IsBuildingInChain,008A11C0,Ed,,"IsBuildingInChain(""army-admin"")","Is garrison residence's building (all slots, road and fortifications for settlements) in the building chain specified by the parameter?",The key of the building chain you are querying from the building_chains table
+conditions - queries you may call from campaign script,IsBuildingOfType,008A1410,Ed,,"IsBuildingOfType(""admiralty"")","Is garrison residence's building type (all slots, road and fortifications for settlements) equal to the parameter?",The key of the building level you are querying from the building_levels table
+conditions - queries you may call from campaign script,IsCarryingTroops,008A1680,Ed,,IsCarryingTroops(),Is the character transporting an army?,none
+conditions - queries you may call from campaign script,IsChildOf,00DA9680,tom,,"IsChildOf(""tax_slider"")","Returns true if the components parent, (or parent's parent, or parent's parent's parent etc) has the id specified ",Component id
+conditions - queries you may call from campaign script,IsColony,008A1710,Ed,,IsColony(),Is the region a colony,none
+conditions - queries you may call from campaign script,IsComponentType,00DA9750,tom,,"IsComponentType(""government_screens"")",Returns true if the event was fired by the component named,Component id
+conditions - queries you may call from campaign script,IsFactionBesiegingSettlement,008A17B0,Ed,,"IsFactionBesiegingSettlement(""settlement:region:settlement_id"")",Is the context faction besieging the specified settlement? Intended for use with faction start of turn event.,Settlement key
+conditions - queries you may call from campaign script,IsFactionLeader,008A1940,Luke,,IsFactionLeader(),Is this character the faction leader?,none
+conditions - queries you may call from campaign script,IsFactionLeaderFemale,008A18A0,Luke,,IsFactionLeaderFemale(),Is this character the faction leader and are they female? (Queen),none
+conditions - queries you may call from campaign script,IsGarrisoned,008A19F0,Ed,,IsGarrisoned(),Is garrison residence garrisoned?,none
+conditions - queries you may call from campaign script,IsGuerrillaGeneral,008A1A60,Paul,,IsGuerrillaGeneral(),Tests whether the character is a guerilla general,None
+conditions - queries you may call from campaign script,IsHomeRegion,008A1B20,Ed,,IsHomeRegion(),Is this region the home region of the owning faction,none
+conditions - queries you may call from campaign script,IsMessageType,00DA9750,tom,,"IsMessageType(""unit_routs_in_battle"")",Returns true if the event that triggered the condition check was for the message named,Message id
+conditions - queries you may call from campaign script,IsMultiplayer,008A1BA0,Ting,,IsMultiplayer(),Returns true when in multiplayer campaign,None
+conditions - queries you may call from campaign script,IsPlayerTurn,008A1C10,Luke,,IsPlayerTurn(),Is this the players turn?,None
+conditions - queries you may call from campaign script,IsPortGarrisoned,008A1CA0,Ed,,IsPortGarrisoned(),Is the port garrisoned by a navy?,none
+conditions - queries you may call from campaign script,IsTheatreGovernor,008A1D40,Luke,,IsTheatreGovernor(),Returns whether the character is a governor,none
+conditions - queries you may call from campaign script,IsTriggerableHistoricalEvent,008A1DC0,Paul,,"IsTriggerableHistoricalEvent(""3_colour_printing"")",,Historical event record key
+conditions - queries you may call from campaign script,IsUnderBlockade,008A1F60,Ed,,IsUnderBlockade(),Is the character under blockade?,none
+conditions - queries you may call from campaign script,IsUnderSiege,008A1FF0,Ed,,IsUnderSiege(),Is the character under siege?,none
+conditions - queries you may call from campaign script,LandTradeRouteRaided,008A20A0,Luke,,LandTradeRouteRaided(),Was one of this factions land trade routes has been raided i9n the last round?,none
+conditions - queries you may call from campaign script,LosingMoney,008A2100,Paul,,LosingMoney(),Returns whether or not the factions regular expenditure exceeds their regular income,none
+conditions - queries you may call from campaign script,MapPosition,009BE540,Ting,,"MapPosition(x, y)",check to see if a map location matches the one return by the context,Location on the map
+conditions - queries you may call from campaign script,MissionName,009BE760,Alan,,MissionName(Build_farm_ep1),Compare the custom identifier of the mission to the parameter,mission name
+conditions - queries you may call from campaign script,NoActionThisTurn,008A2190,Luke,,NoActionThisTurn(),Has an action occured this turn for this character?,none
+conditions - queries you may call from campaign script,OffensiveSiegesFought,008A21F0,Ed,,OffensiveSiegesFought(),Returns the number of siege offences a general has attempted,none
+conditions - queries you may call from campaign script,OffensiveSiegesWon,008A2260,Ed,,OffensiveSiegesWon(),Returns the number of siege offences a general has won,none
+conditions - queries you may call from campaign script,OnAWarFooting,008A22D0,Paul,,OnAWarFooting(),Returns whether or not the characters faction is at war with anyone,none
+conditions - queries you may call from campaign script,ParentId,00DA98E0,tom,,"ParentId(""tax_slider"")",Returns true if the name of the Components parent matches the id specified,Component id
+conditions - queries you may call from campaign script,PercentageUnspentIncome,008A2380,Luke,,PercentageUnspentIncome(),What percentage of the characters factions income remains unspent?,None
+conditions - queries you may call from campaign script,PlayerFactionIsAttacker,008A24A0,Luke,,PlayerFactionIsAttacker(),Is the attackers faction the local faction?,none
+conditions - queries you may call from campaign script,PortBlockaded,008A2610,Luke,,PortBlockaded(),"Is the port blockaded, and did it start in the last round?",none
+conditions - queries you may call from campaign script,PortBlockadedLocal,008A2530,Luke,,PortBlockadedLocal(),"Is the port blockaded by the local faction, and did it start in the last round?",none
+conditions - queries you may call from campaign script,RandomPercentCampaign,008A26B0,Ed,,RandomPercentCampaign(50),Returns whether the parameter value is less than the random number,Number between 0 and 100 to test against
+conditions - queries you may call from campaign script,RegionBuildableSlotEmpty,008A27A0,Ed,,RegionBuildableSlotEmpty(),Has the slot not been developed?,none
+conditions - queries you may call from campaign script,RegionBuildingFinished,008A28C0,Ed,,RegionBuildingFinished(),Gets the key of the last building constructed in the region,none
+conditions - queries you may call from campaign script,RegionClamoursReform,008A2960,Ed,,RegionClamoursReform(),Is the population in this region clamouring for reform,none
+conditions - queries you may call from campaign script,RegionCultureIsFactionCulture,008A29D0,Ed,,RegionCultureIsFactionCulture(),Is the region's originating culture the same as the owning factions culture,none
+conditions - queries you may call from campaign script,RegionDemands,008A2A70,Ed,,RegionDemands(),Is the population in this region writing letters of demand,none
+conditions - queries you may call from campaign script,RegionEconomicGrowthLow,008A2AE0,Luke,,RegionEconomicGrowthLow(),Is this regions economic growth low?,none
+conditions - queries you may call from campaign script,RegionFoodShortageEmigration,008A2B50,Luke,,RegionFoodShortageEmigration(),Are people in this region emigrating due to a shortage of food?,none
+conditions - queries you may call from campaign script,RegionGovernorAttribute,008A2BE0,Luke,,"RegionGovernorAttribute(""management"")",Gets the level of the regions governers attribute specified as a parameter,The attribute which you wish to check on the regions governor
+conditions - queries you may call from campaign script,RegionHasFoodShortages,008A2CB0,Ed,,RegionHasFoodShortages(),Does the region have food shortages,none
+conditions - queries you may call from campaign script,RegionHasUnexportedTrade,008A2D20,Paul,,RegionHasUnexportedTrade(),Is the region producing more than it is exporting?,none
+conditions - queries you may call from campaign script,RegionIsLocal,008A2D90,Ed,,RegionIsLocal(),Does the region belong to the player faction?,none
+conditions - queries you may call from campaign script,RegionIsRebelling,008A2E10,Ed,,"RegionIsRebelling(""ita_alpes_maritimes"")",Is the specified region rebelling. Requires faction context.,Key of the region to query
+conditions - queries you may call from campaign script,RegionPopulationGrowthLow,008A2ED0,Luke,,RegionPopulationGrowthLow(),Is this regions population growth low?,none
+conditions - queries you may call from campaign script,RegionPopulationLow,008A2F70,Ed,,RegionPopulationLow(),Tests if the population of a region is has dropped below the previous town spawn threshold e.g. region has 5 towns but has dropped below the population requirement for 4 towns,none
+conditions - queries you may call from campaign script,RegionPopulationMaxReached,008A3020,Ed,,RegionPopulationMaxReached(),Tests if the population of a region the maximum population,none
+conditions - queries you may call from campaign script,RegionRebels,008A30A0,Ed,,RegionRebels(),Is the region rebelling,none
+conditions - queries you may call from campaign script,RegionReligionIsStateReligion,008A3110,Ed,,RegionReligionIsStateReligion(),Is the region's religion the same as the owning factions religion,none
+conditions - queries you may call from campaign script,RegionReligiousEmigration,008A31A0,Luke,,RegionReligiousEmigration(),Are people in this region emigrating due to religious intolerance?,none
+conditions - queries you may call from campaign script,RegionResourceExists,008A3230,Paul,,"RegionResourceExists(""res_gold"")",Returns whether the resource exists in the region,Valid entry from 'key' field from resources table in Empire.mdb
+conditions - queries you may call from campaign script,RegionResourceExploited,008A3370,Paul,,"RegionResourceExploited(""res_gold"")",Returns whether the resource is produced in the region,Valid entry from 'key' field from resources table in Empire.mdb
+conditions - queries you may call from campaign script,RegionRiots,008A34C0,Ed,,RegionRiots(),Is the population in this region rioting,none
+conditions - queries you may call from campaign script,RegionSlotBuildingCount,008A3530,Ed,,RegionSlotBuildingCount(),Counts the number of buildings in the region slots in the region,none
+conditions - queries you may call from campaign script,RegionSlotBuildingCultureExists,008A35F0,Ed,,"RegionSlotBuildingCultureExists(""european"")",Tests if the region has a building from the given culture,The key of the culture from the cultures table
+conditions - queries you may call from campaign script,RegionSlotBuildingTypeCount,008A3730,Ed,,"RegionSlotBuildingTypeCount(""barracks"")",Counts the number of buildings in the region slots in the region of the specified type,The key of the building level you are querying from the building_levels table
+conditions - queries you may call from campaign script,RegionSlotBuildingTypeExists,008A3880,Ed,,"RegionSlotBuildingTypeExists(""barracks"")",Tests if a building of the specified type exists in the region,The key of the building level you are querying from the building_levels table
+conditions - queries you may call from campaign script,RegionSlotCount,008A3A00,Ed,,RegionSlotCount(),Counts the number of slots in a region including settlement slots,none
+conditions - queries you may call from campaign script,RegionSlotEmptyCount,008A3AC0,Ed,,RegionSlotEmptyCount(),Counts the number of empty (no building) slots in a region including settlement slots,none
+conditions - queries you may call from campaign script,RegionSlotTypeExists,008A3BD0,Ed,,"RegionSlotTypeExists(""fish"")",Tests to see if the region has a slot (in any status) whose type matches the parameter,The key of the slot type you wish to find from the slots table
+conditions - queries you may call from campaign script,RegionTaxExempt,008A3CC0,Luke,,RegionTaxExempt(),Gets whether the region is tax exempt or not,n/a
+conditions - queries you may call from campaign script,RegionTaxLevel,008A3D20,Paul,,"RegionTaxLevel(""lower_classes"")",Returns whether the regions tax level,"""lower_classes"" or ""upper_classes"""
+conditions - queries you may call from campaign script,RegionTaxTownWealthGrowthReduction,008A3E10,Paul,,RegionTaxTownWealthGrowthReduction() > 1,Returns the percentage of the regions town wealth growth lost due to taxes,none
+conditions - queries you may call from campaign script,RegionTownWealthGrowth,008A3E90,Paul,,RegionTownWealthGrowth() > 50,Returns the town wealth growth of the region,none
+conditions - queries you may call from campaign script,RegionWealthDecrease,008A3F00,Luke,,RegionWealthDecrease(),How much has the regions wealth decreased?,none
+conditions - queries you may call from campaign script,RegionWealthIncrease,008A3F80,Luke,,RegionWealthIncrease(),How much has the regions wealth increased?,none
+conditions - queries you may call from campaign script,ResearchCategory,008A4000,Luke,,"ResearchCategory(""enlightenment"")",Is the research just completed of this category?,Category
+conditions - queries you may call from campaign script,ResearchQueueIdle,008A40B0,Ed,,ResearchQueueIdle(),Is faction not researching any tech evn though they could be,none
+conditions - queries you may call from campaign script,ResearchType,008A4200,Luke,,"ResearchType(""military_navy_flintlock_cannon"")",Is the technology just researched of this type?,Research type
+conditions - queries you may call from campaign script,ResearchTypeUniqueToFaction,008A4120,Luke,,ResearchTypeUniqueToFaction(),Are we the first faction to research this technology type?,Research type
+conditions - queries you may call from campaign script,RoadsAtMaxLevel,008A42A0,Paul,,RoadsAtMaxLevel(),Are the regions roads at the maximum level (and thus impossible to upgrade)?,none
+conditions - queries you may call from campaign script,SeaTradeRouteRaided,008A4340,Luke,,SeaTradeRouteRaided(),Was one of this factions sea trade routes has been raided i9n the last round?,none
+conditions - queries you may call from campaign script,SettlementBuildingQueueIdleDespiteCash,008A43A0,Ed,,SettlementBuildingQueueIdleDespiteCash(),Is the settlement's building queue empty even though the faction can afford to build the cheapest building in any of its slot?,none
+conditions - queries you may call from campaign script,SettlementFortificationsBuildingQueueIdleDespiteCash,008A4490,Ed,,SettlementFortificationsBuildingQueueIdleDespiteCash(),Is the settlements's fortification building queue empty even though the faction can afford to build the cheapest building?,none
+conditions - queries you may call from campaign script,SettlementIsLocal,008A4520,Ed,,SettlementIsLocal(),Does the settlement belong to the player faction?,none
+conditions - queries you may call from campaign script,SettlementName,008A45A0,Ed,,"SettlementName(""settlement:acadia:fort_nashwaak"")",Is the settlement's unique id equal to the parameter?,"The unique id of the settlement from the campaign_map_settlements table or a character, in which case it looks at the settlement the character is in"
+conditions - queries you may call from campaign script,SettlementOwnedBy,008A4680,Ed,,"SettlementOwnedBy(""france"")",Does the specified faction own the settlement in context,"The unique id of the settlement from the campaign_map_settlements table or a character, in which case it looks at the settlement the character is in. Use ""rebels"" to test for rebel ownership"
+conditions - queries you may call from campaign script,SettlementRoadBuildingQueueIdleDespiteCash,008A47C0,Ed,,SettlementRoadBuildingQueueIdleDespiteCash(),Is the settlements's road building queue empty even though the faction can afford to build the cheapest building?,none
+conditions - queries you may call from campaign script,SlotBuildingQueueIdleDespiteCash,008A4850,Ed,,SlotBuildingQueueIdleDespiteCash(),Is the slot's building queue empty even though the faction can afford to build the cheapest building?,none
+conditions - queries you may call from campaign script,SlotIsAlliedCampaign,008A48D0,Luke,,SlotIsAlliedCampaign(),Does the slot belong to a faction allied to the player faction?,none
+conditions - queries you may call from campaign script,SlotIsLocal,008A4950,Ed,,SlotIsLocal(),Does the slot belong to the player faction?,none
+conditions - queries you may call from campaign script,SlotName,008A49D0,Ed,,"SlotName(""port:england:portsmouth"")",Returns if the passed slot name is equal to the slot's name,The name of the slot to check for
+conditions - queries you may call from campaign script,SlotType,008A4AA0,Ed,,"SlotType(""wheat"")",Is the slot's type from the slots table equal to the parameter?,The slot type (key from the slots table)
+conditions - queries you may call from campaign script,SupportCostsPercentage,008A4B50,Luke,,SupportCostsPercentage(),The percentage of outgoings used for upkeep in the recent turns for the given faction,none
+conditions - queries you may call from campaign script,TargetArmyGreaterCombatStrength,008A4C30,Ed,,TargetArmyGreaterCombatStrength(),The does the target army have greater combat strength than the character?,None
+conditions - queries you may call from campaign script,TargetCharacterIsAlliedCampaign,008A4CB0,Ed,,TargetCharacterIsAlliedCampaign(),The target character is allied to the character?,None
+conditions - queries you may call from campaign script,TargetCharacterIsEnemyCampaign,008A4D40,Ed,,TargetCharacterIsEnemyCampaign(),The target character is an enemy of the character?,None
+conditions - queries you may call from campaign script,TargetInStrikingRangeOfEnemy,008A4DD0,Ed,,CharacterIsEnemy(),The character is an enemy of the local faction?,None
+conditions - queries you may call from campaign script,TaxCollectionLimited,008A4E70,Paul,,TaxCollectionLimited(),Are all the factions government building at the maximum level (and thus impossible to upgrade)?,none
+conditions - queries you may call from campaign script,TaxLevel,008A4F50,Paul,,"FactionTaxLevel() < TaxLevel(""extortionate"")",Returns the tax level for the given tax key,Valid entry from 'key' field from taxes_levels table in Empire.mdb
+conditions - queries you may call from campaign script,TradeNodeAvailableWorldwide,008A5090,Ed,,TradeNodeAvailableWorldwide(),Is there an unoccupied trade node (worldwide). Requires faction context,None
+conditions - queries you may call from campaign script,TradePortsAtMaxLevel,008A52D0,Paul,,TradePortsAtMaxLevel(),Are all of the regions trade ports at the maximum level (and thus impossible to upgrade)?,none
+conditions - queries you may call from campaign script,TradeRouteIsEnemy,008A53B0,Luke,,TradeRouteIsEnemy(),Returns whether the trade route attacked is used by an enemy of the local faction,None
+conditions - queries you may call from campaign script,TradeRouteIsLocal,008A5510,Luke,,TradeRouteIsLocal(),Returns whether the trade route attacked is used by the local faction,None
+conditions - queries you may call from campaign script,TradeRouteLimitReached,008A5670,Paul,,TradeRouteLimitReached(),Has the faction reached its limit of trade routes?,none
+conditions - queries you may call from campaign script,TurnNumber,008A5770,Guy,,TurnNumber(),"Returns the number of the turn currently being taken, starting at 1",None
+conditions - queries you may call from campaign script,TurnsSinceThreadLastAdvanced,00460AD0,Guy,,"TurnsSinceThreadLastAdvanced(""0001_Battle_Advice_Friendly_Fire_Thread"")",The number of turns since the advice thread was last advanced - 0 signifies that the thread is unadvanced or the number of turns cannot be established,Key from advice_threads table
+conditions - queries you may call from campaign script,UnitCategory,008A57E0,Luke,,"UnitCategory(""naval_frigate"")",Is the unit of this category type?,none
+conditions - queries you may call from campaign script,UnitClass,008A58C0,Luke,,"UnitClass(""cavalry_missile"")",Is the unit of this class?,none
+conditions - queries you may call from campaign script,UnitCrushedInsurrection,008A59A0,Luke,,UnitCrushedInsurrection(),Did the given unit crush an insurrection in the last turn?,none
+conditions - queries you may call from campaign script,UnitCultureType,008A59E0,Luke,,"UnitCultureType(""tribal"")",Is the unit of this culture type?,none
+conditions - queries you may call from campaign script,UnitFoughtInBattle,008A5AC0,Luke,,UnitFoughtInBattle(),Did the unit fight in the last battle?,none
+conditions - queries you may call from campaign script,UnitFoughtInMelee,008A5C20,Luke,,UnitFoughtInMelee(),Did the unit melee fight in the last battle?,none
+conditions - queries you may call from campaign script,UnitInTheatre,008A5D70,Luke,,"UnitInTheatre(""-1133129049"")",Is this unit within the specified theatre?,none
+conditions - queries you may call from campaign script,UnitOnContinent,008A5EC0,Luke,,"UnitOnContinent(""cont_africa_south"")",Is the given unit on the specified continent?,none
+conditions - queries you may call from campaign script,UnitRouted,008A5F90,Luke,,UnitRouted(),Did the given unit rout?,none
+conditions - queries you may call from campaign script,UnitSufferedCasualties,008A60E0,Luke,,UnitSufferedCasualties(),What percentage of casualties did this unit suffer?,none
+conditions - queries you may call from campaign script,UnitTrait,008A62F0,Luke,,"UnitTrait(""U_Infected_Dysentry"") > 2",Returns the value of the specified trait (0 if not present),Trait name
+conditions - queries you may call from campaign script,UnitType,008A6400,Ed,,"UnitType(""euro_line_infantry"")",Is the unit's unit record key equal to the parameter?,The unit key from the units table
+conditions - queries you may call from campaign script,UnitWonBattle,008A64C0,Luke,,UnitWonBattle(),Is the unit part of the winning alliance in a battle?,None
+conditions - queries you may call from campaign script,UnusedInternationalTradeRoute,008A6550,Paul,,UnusedInternationalTradeRoute(),Could the faction establish a new international trade route?,none
+conditions - queries you may call from campaign script,WarEndedCharacterFaction,008A6650,Luke,,WarEndedCharacterFaction(),Was peace declared between this faction and another faction this turn?,""
+conditions - queries you may call from campaign script,WarStartedCharacterFaction,008A66C0,Luke,,WarStartedCharacterFaction(),Did a war start between this faction and another faction this turn?,""
+conditions - queries you may call from campaign script,WorldResourceExists,008A6730,Paul,,"WorldResourceExists(""res_gold"")",Returns whether the resource exists anywhere,Valid entry from 'key' field from resources table in Empire.mdb
+conditions - queries you may call from campaign script,WorldResourceExploited,008A68A0,Paul,,"WorldResourceExploited(""res_gold"")",Returns whether the resource is produced by any faction,Valid entry from 'key' field from resources table in Empire.mdb
+conditions - queries you may call from campaign script,WorldwideAncillaryTypeExists,008A6A20,Tom,,"WorldwideAncillaryTypeExists(""unkillable_cat"") == true",Returns whether the named ancillary exists in the world somewhere,Ancillary name
+conditions - queries you may call from campaign script,WouldRebellionInRegionBeRevolution,008A6B00,Alan,,WouldRebellionBeRevolutionInRegion(),Would a rebellion here be revolution?,none
+events - callback lists you may append handlers to,AdviceDismissed,0130C37C,,Advice thread,,Advice has been dismissed by the UI,""
+events - callback lists you may append handlers to,AdviceFinishedTrigger,013509DC,,Sound,,Notify scripters when current advice has finished playing,""
+events - callback lists you may append handlers to,AdviceIssued,0130C37C,,Advice thread,,Advice has been sent to the UI,""
+events - callback lists you may append handlers to,AdviceSuperseded,01353338,,Advice thread,,Advice has been superseded by another advice,""
+events - callback lists you may append handlers to,ArmySabotageAttemptSuccess,01351E1C,,Character,,A character has successfully sabotaged an enemy army,""
+events - callback lists you may append handlers to,AssassinationAttemptSuccess,013512AC,,Character,,An agent has successfully assassinated an enemy,""
+events - callback lists you may append handlers to,BattleBoardingActionCommenced,0131EC08,,Battle,,Fired each time a ship commences the boarding of an enemy vessel,""
+events - callback lists you may append handlers to,BattleBoardingShip,0131EC08,,Battle,,Gets triggered when the order to board a ship is issued,""
+events - callback lists you may append handlers to,BattleCommandingUnitRouts,0131EC08,,Land Battle,,Fires off an event for when a unit that has a commanding general attached to it routs,""
+events - callback lists you may append handlers to,BattleCompleted,01351E1C,,Campaign model,,A battle has been completed on the campaign map,""
+events - callback lists you may append handlers to,BattleConflictPhaseCommenced,0131EC08,,Battle,,Fired once at the start of conflict,""
+events - callback lists you may append handlers to,BattleDeploymentPhaseCommenced,0131EC08,,Battle,,Fired once at the start of deployment,""
+events - callback lists you may append handlers to,BattleFortPlazaCaptureCommenced,0131EC08,,Battle,,Fired each time an attacking unit starts capturing the victory location inside a fort,""
+events - callback lists you may append handlers to,BattleShipAttacksEnemyShip,0131EC08,,Battle,,Gets fired off for every attack order executed by a ship,""
+events - callback lists you may append handlers to,BattleShipCaughtFire,0131EC08,,Battle,,A ship just caught fire,""
+events - callback lists you may append handlers to,BattleShipMagazineExplosion,0131EC08,,Battle,,Fired off when a ship explodes,""
+events - callback lists you may append handlers to,BattleShipRouts,0131EC08,,Naval Battle,,Fires off whenever a ship enters the rout state of morale,""
+events - callback lists you may append handlers to,BattleShipRunAground,0131EC08,,Naval Battle,,Fired off when a ship collides with the terrain,""
+events - callback lists you may append handlers to,BattleShipSailingIntoWind,0131EC08,,Naval Battle,,Fired off when a ship is sailing approximately into the wind,""
+events - callback lists you may append handlers to,BattleShipSurrendered,0131EC08,,Naval Battle,,Fired off when a ship surrenders,""
+events - callback lists you may append handlers to,BattleUnitAttacksBuilding,0131EC08,,Battle,,Gets fired off for every attack order executed by a unit,""
+events - callback lists you may append handlers to,BattleUnitAttacksEnemyUnit,0131EC08,,Battle,,Gets fired off for every attack order executed by a unit,""
+events - callback lists you may append handlers to,BattleUnitAttacksWalls,0131EC08,,Battle,,Gets fired off for every attack order executed by a unit when attacking a fort building,""
+events - callback lists you may append handlers to,BattleUnitCapturesBuilding,0131EC08,,Battle,,"Gets fired each time a building has a new alliance as an owner, initiated by a unit",""
+events - callback lists you may append handlers to,BattleUnitDestroysBuilding,0131EC08,,Battle,,Gets fired each time a building gets destroyed by a unit,""
+events - callback lists you may append handlers to,BattleUnitRouts,0131EC08,,Land Battle,,Fires off an event for when a unit enters rout.,""
+events - callback lists you may append handlers to,BattleUnitUsingBuilding,0131EC08,,Battle,,Fires off when a unit enters a building,""
+events - callback lists you may append handlers to,BattleUnitUsingWall,0131EC08,,Battle,,Fires off when a unit attaches itself to a wall,""
+events - callback lists you may append handlers to,BuildingCardSelected,01353F38,,String (building record key),,Fires when a building card is clicked on on the hud,""
+events - callback lists you may append handlers to,BuildingCompleted,013512AC,,"Building level record, Character",,A building has been completed,""
+events - callback lists you may append handlers to,BuildingConstructionIssuedByPlayer,01353338,,building level,,Fired when the player selects adds a building to the queue,""
+events - callback lists you may append handlers to,BuildingInfoPanelOpenedCampaign,013929B8,,string,,triggers when the building info panel is opened by the user in the campaign game,""
+events - callback lists you may append handlers to,CameraMoverCancelled,01350B10,,MAP_LOCATION,,When the camera controller is cancelled before completion,""
+events - callback lists you may append handlers to,CameraMoverFinished,01353338,,MAP_LOCATION,,"When the camera reaches the end of its path, or when another camera transition cuts in",""
+events - callback lists you may append handlers to,CampaignArmiesMerge,01351E1C,,"Character, character target",,Two campaign armies merge,""
+events - callback lists you may append handlers to,CampaignBuildingDamaged,01351E1C,,Region slot,,A building is damaged,""
+events - callback lists you may append handlers to,CampaignSettlementAttacked,01351E1C,,Settlement,,A settlement has been attacked,""
+events - callback lists you may append handlers to,CampaignSlotAttacked,01351E1C,,Region slot,,A slot has been attacked,""
+events - callback lists you may append handlers to,CharacterAttacksAlly,013512AC,,Character,,A character has attacked an ally,""
+events - callback lists you may append handlers to,CharacterBlockadedPort,01350B10,,Character,,A character successfully blockades a port,""
+events - callback lists you may append handlers to,CharacterBrokePortBlockade,01350B10,,Character,,A character successfully broke a port blockade,""
+events - callback lists you may append handlers to,CharacterBuildsSpyNetwork,01350B10,,Character,,A character builds a spy network,""
+events - callback lists you may append handlers to,CharacterCanLiberate,01350B10,,Character,,A character was given the opportunity to liberate a region,""
+events - callback lists you may append handlers to,CharacterCandidateBecomesMinister,01350B10,,Character,,Fired when a candidate becomes a minister,""
+events - callback lists you may append handlers to,CharacterCompletedBattle,01351E1C,,Character,,A character took part in a battle and didn't die,""
+events - callback lists you may append handlers to,CharacterCreated,01353F38,,Character,,Fired when a character is created,""
+events - callback lists you may append handlers to,CharacterCriticallyFailsAssassination,01351E1C,,Character,,A character critically fails an assassination attempt (and dies),""
+events - callback lists you may append handlers to,CharacterDisembarksNavy,01351E1C,,Character,,A character disembarks a navy,""
+events - callback lists you may append handlers to,CharacterEmbarksNavy,01351E1C,,Character,,A character embarks on a navy,""
+events - callback lists you may append handlers to,CharacterEntersAttritionalArea,01350B10,,Character,,Fired when a characters ends its movement in a position where it will suffer attrition,""
+events - callback lists you may append handlers to,CharacterEntersGarrison,01351E1C,,"Garrison, Character",,"A character enters a garrison (settlement, slot or fort)",""
+events - callback lists you may append handlers to,CharacterFactionCompletesResearch,01350B10,,"Technology record, Character",,A character belonging to the faction has completed some research,""
+events - callback lists you may append handlers to,CharacterFactionSpyAttemptSuccessful,01350B10,,Character,,A character belonging to the faction of this faction leader has successfully spied on an enemy,""
+events - callback lists you may append handlers to,CharacterFactionSuffersSuccessfulSpyAttempt,01350B10,,Character,,The capital of the faction of this faction leader was successfully spied on by an enemy,""
+events - callback lists you may append handlers to,CharacterInfoPanelOpened,01367F9C,,"character, faction",,triggers the character information panel has been opened,""
+events - callback lists you may append handlers to,CharacterLootedSettlement,01351E1C,,Character,,A character loots a settlement,""
+events - callback lists you may append handlers to,CharacterPromoted,013512AC,,Character,,A character has been promoted,""
+events - callback lists you may append handlers to,CharacterSelected,01351E1C,,Character,,Fired when a character is selected,""
+events - callback lists you may append handlers to,CharacterTurnEnd,01353F38,,Character,,Fired for every character at the start of their turn,""
+events - callback lists you may append handlers to,CharacterTurnStart,01353F38,,Character,,Fired for every character at the start of their turn,""
+events - callback lists you may append handlers to,ComponentLClickUp,01353F38,,"String (ComponentType condition), Component",,Triggered when a user clicks on any component,""
+events - callback lists you may append handlers to,CustomMission,01353338,,Cannot be used in LUA,,Internal event: does not fire and cannot be used in the script,""
+events - callback lists you may append handlers to,DuelFought,013512AC,,Character,,A duel has completed,""
+events - callback lists you may append handlers to,EspionageAgentApprehended,013512AC,,Character,,A character has foiled an espionage attempt,""
+events - callback lists you may append handlers to,EventMessageOpenedBattle,01367F9C,,string (event name),,triggers when a dropdown message is opened by the user,""
+events - callback lists you may append handlers to,EventMessageOpenedCampaign,01367F9C,,string (event name),,triggers when a dropdown message is opened by the user,""
+events - callback lists you may append handlers to,FactionBecomesLiberationProtectorate,01350B10,,Faction,,A faction has liberated another faction,""
+events - callback lists you may append handlers to,FactionGovernmentTypeChanged,013512AC,,Faction,,The factions government type has changed,""
+events - callback lists you may append handlers to,FactionRoundStart,013512AC,,Faction,,Faction starts the round,""
+events - callback lists you may append handlers to,FactionTurnEnd,01351E1C,,Faction,,Faction ends it's turn,""
+events - callback lists you may append handlers to,FactionTurnStart,01351E1C,,Faction,,Faction starts it's turn,""
+events - callback lists you may append handlers to,FortSelected,01353F38,,Fort,,Fired when the player selects a fort on the map,""
+events - callback lists you may append handlers to,GarrisonResidenceCaptured,0130C37C,,Garrison residence,,"A garrison residence (settlement, fort, port &c.) has been captured",""
+events - callback lists you may append handlers to,GovernorshipTaxRateChanged,01351E1C,,Governorship,,A tax rate in a governorship has changed,""
+events - callback lists you may append handlers to,HarassmentAttemptSuccess,01351E1C,,Character,,A character has successfully harrassed an enemy army,""
+events - callback lists you may append handlers to,HistoricalCharacters,01350B10,,List of possible historical characters,,,""
+events - callback lists you may append handlers to,HistoricalEvents,01350B10,,List of possible historical events,,,""
+events - callback lists you may append handlers to,HudRefresh,01392E34,,Empty string,,triggers when the HUD is reconstructed,""
+events - callback lists you may append handlers to,IncomingMessage,01367F9C,,string (event name),,triggers when a dropdown message first starts falling down the screen,""
+events - callback lists you may append handlers to,LandTradeRouteRaided,013512AC,,"Character, Position",,A character has raided a land trade route,""
+events - callback lists you may append handlers to,LoadingGame,01353338,,FileHandle,,A game is being loaded,""
+events - callback lists you may append handlers to,LocationEntered,01353338,,"MAP_LOCATION, the piece that entered",,"When a piece enters a location trigger, fire ony once per trigger",""
+events - callback lists you may append handlers to,LocationUnveiled,01353338,,"MAP_LOCATION, the piece that unveiled the area",,When the location becomes visible for the first time,""
+events - callback lists you may append handlers to,MissionFailed,0130C37C,,"Mission, mission manager, faction of mission manager, campaign model",,The player has failed a mission,""
+events - callback lists you may append handlers to,MissionIssued,0130C37C,,"Mission, mission manager, faction of mission manager, campaign model",,A mission has been issued to the player,""
+events - callback lists you may append handlers to,MissionNearingExpiry,0130C37C,,"Mission, mission manager, faction of mission manager, campaign model",,A mission only has a quarter of its time left before its too late to complete it,""
+events - callback lists you may append handlers to,MissionSucceeded,0130C37C,,"Mission, mission manager, faction of mission manager, campaign model",,A mission has been successfully completed,""
+events - callback lists you may append handlers to,ModelCreated,01350B10,,none,,"A game is being started or loaded, at this point the most vital parts pf the game are initialized",""
+events - callback lists you may append handlers to,MovementPointsExhausted,01351E1C,,Character,,A general can move no more,""
+events - callback lists you may append handlers to,MultiTurnMove,013512AC,,Character,,A character has been issued a movement that will take more than one turn,""
+events - callback lists you may append handlers to,NewCampaignStarted,013111B8,,none,,"A new campaign game is being started - called exactly once during a campaign, when it is created for the first time - NOT called when loading, NOT called when processing startpos",""
+events - callback lists you may append handlers to,NewSession,01353338,,model access,,"A game is being started, could be a new game or loading a save game",""
+events - callback lists you may append handlers to,PanelAdviceRequestedBattle,01367F9C,,string,,triggers when the user clicks on the request advice button on a panel in battle,""
+events - callback lists you may append handlers to,PanelAdviceRequestedCampaign,01367F9C,,string,,triggers when the user clicks on the request advice button on a panel in the campaign game,""
+events - callback lists you may append handlers to,PanelClosedBattle,01367F9C,,string,,triggers when a ui panel is closed by the user in battle,""
+events - callback lists you may append handlers to,PanelClosedCampaign,01367F9C,,string,,triggers when a ui panel is closed by the user in the campaign game,""
+events - callback lists you may append handlers to,PanelOpenedBattle,01367F9C,,string,,triggers when a ui panel is opened by the user in battle,""
+events - callback lists you may append handlers to,PanelOpenedCampaign,01367F9C,,string,,triggers when a ui panel is opened by the user in the campaign game,""
+events - callback lists you may append handlers to,PendingBankruptcy,01350B10,,Faction,,The faction is about to go bankrupt,""
+events - callback lists you may append handlers to,RecruitmentItemIssuedByPlayer,01353338,,unit record,,Fired when the player selects adds a unit to the queue,""
+events - callback lists you may append handlers to,RegionIssuesDemands,013512AC,,Region,,This region has issued demands,""
+events - callback lists you may append handlers to,RegionRebels,013512AC,,Region,,This region has started rebelling,""
+events - callback lists you may append handlers to,RegionRiots,013512AC,,Region,,This region has started riots,""
+events - callback lists you may append handlers to,RegionStrikes,01351E1C,,Region,,This region has started striking,""
+events - callback lists you may append handlers to,RegionTurnEnd,01351E1C,,Region,,Region ends it's turn,""
+events - callback lists you may append handlers to,RegionTurnStart,01351E1C,,Region,,Region starts it's turn,""
+events - callback lists you may append handlers to,ResearchCompleted,013512AC,,"Technology record, Character",,Research has been completed in this slot,""
+events - callback lists you may append handlers to,SabotageAttemptSuccess,013512AC,,Character,,A character has successfully sabotaged the enemy,""
+events - callback lists you may append handlers to,SavingGame,01353338,,FileHandle,,A game is being saveed,""
+events - callback lists you may append handlers to,SeaTradeRouteRaided,013512AC,,"Character, Position",,A character has raided a sea trade route,""
+events - callback lists you may append handlers to,SettlementOccupied,01351E1C,,Settlement,,A settlement is occupied by an enemy faction,""
+events - callback lists you may append handlers to,SettlementSelected,01353F38,,Settlement,,Fired when the player selects a settlement on the map,""
+events - callback lists you may append handlers to,SlotOccupied,013512AC,,Region Slot,,A slot is occupied by an enemy faction,""
+events - callback lists you may append handlers to,SlotOpens,013512AC,,"Slot, Region",,A slot has just opened,""
+events - callback lists you may append handlers to,SlotRoundStart,013512AC,,"Slot, Region",,The start of round for this slot,""
+events - callback lists you may append handlers to,SlotSelected,01353F38,,Slot,,Fired when the player selects a settlement slot on the map,""
+events - callback lists you may append handlers to,SlotTurnStart,013512AC,,"Slot, Region",,The start of turn for this slot,""
+events - callback lists you may append handlers to,SpyingAttemptSuccess,013512AC,,Character,,An agent has successfully spied on the enemy,""
+events - callback lists you may append handlers to,SufferAssassinationAttempt,013512AC,,Character,,A character has suffered an assassination attempt,""
+events - callback lists you may append handlers to,SufferSpyingAttempt,013512AC,,Character,,A character has suffered a spying attempt,""
+events - callback lists you may append handlers to,TechnologyInfoPanelOpenedCampaign,013929B8,,string,,triggers when the technology info panel is opened by the user in the campaign game,""
+events - callback lists you may append handlers to,TestEvent,01351E1C,,model,,Test event,""
+events - callback lists you may append handlers to,TimeTrigger,01353338,,"STRING, the id of the time trigger",,A registered timer have waited long,""
+events - callback lists you may append handlers to,TooltipAdvice,01367F9C,,string,,triggers when a tooltip cycles though all of it's available lines (only happens at end of first sequence,""
+events - callback lists you may append handlers to,TradeRouteEstablished,013512AC,,Faction,,A trade route has been established with this faction,""
+events - callback lists you may append handlers to,UICreated,01353F38,,"String (name of the UI), Component (root component of the ui)",,Fires when the UI is first created,""
+events - callback lists you may append handlers to,UIDestroyed,01353F38,,String (name of the UI),,Fires when the UI is destroyed,""
+events - callback lists you may append handlers to,UngarrisonedFort,01351E1C,,Region slot,,A fort has been left ungarrisoned,""
+events - callback lists you may append handlers to,UnitCompletedBattle,013512AC,,Unit,,A unit has completed the battle,""
+events - callback lists you may append handlers to,UnitCreated,013512AC,,Unit,,A unit has been created,""
+events - callback lists you may append handlers to,UnitSelectedCampaign,01353F38,,Unit (campaign),,Fires when a unit card is selected on the campaign map,""
+events - callback lists you may append handlers to,UnitTrained,01351E1C,,Unit,,A unit is trained,""
+events - callback lists you may append handlers to,UnitTurnEnd,013512AC,,Unit,,A unit has ended its turn,""
+events - callback lists you may append handlers to,VictoryConditionFailed,01353338,,none,,The time limit has ran out for a victory condition,""
+events - callback lists you may append handlers to,VictoryConditionMet,01353338,,faction,,Victory condition has been met by the player,""
+events - callback lists you may append handlers to,WorldCreated,01353338,,none,,"A game is being started or loaded, at this point the most vital parts pf the game are initialized",""
+events - callback lists you may append handlers to,battle_commanding_ship_routs,0131EC08,,Naval Battle,,The ship containing the fleet admiral has just routed,""
+events - callback lists you may append handlers to,battle_ship_sunk,0131EC08,,Naval Battle,,Fired off when a ship has sunk,""
+effects - the `effect` table; these CHANGE game state,adjust_treasury,008A9770,Guy,,adjust_treasury(12000),Adjusts the treasury by the given amount,amount
+effects - the `effect` table; these CHANGE game state,advance_contextual_advice_thread,00461040,Guy,,"advance_contextual_advice_thread(""Character_Agent_Assassin_Early_Advice_Thread"", 4, context)",Directs the advisor to consider issuing advice about the thread,"Advice thread, score increase, context"
+effects - the `effect` table; these CHANGE game state,advance_scripted_advice_thread,00E0DF90,Guy,,"advance_scripted_advice_thread(""Character_Agent_Assassin_Early_Advice_Thread"")","Directs the advisor to advance the specified thread by score increase, issuing advice as appropriate","Advice thread, score increase"
+effects - the `effect` table; these CHANGE game state,advance_scripted_advice_thread_located,00E0E030,Paul,,"advance_scripted_advice_thread_location(""Character_Agent_Assassin_Early_Advice_Thread"", 1, 10.0f, 301.0f)","Directs the advisor to advance the specified thread by score increase, issuing advice as appropriate with the specified location","Advice thread, score increase, location"
+effects - the `effect` table; these CHANGE game state,advice,00E0E0F0,Guy,,"advice(""Click the unit to continue"")",Directs the advisor to display the supplied advice string - please use this for debug only since localisation is bypassed,Advice string
+effects - the `effect` table; these CHANGE game state,ancillary,008AAC30,Tom,,"effect.ancillary(""mayor"")",Causes an ancillary to be created and attached to the character,ancillary record key
+effects - the `effect` table; these CHANGE game state,historical_character,008C9580,Paul,,"historical_character(""abraham_de_moivre"")",Adds the supplied historical character to the game,Historical character record key
+effects - the `effect` table; these CHANGE game state,historical_event,008C97B0,Paul,,"historical_event(""3_colour_printing"")",,Historical event record key
+effects - the `effect` table; these CHANGE game state,remove_ancillary,008E9990,Tom,,"effect.remove_ancillary(""mayor"")",Causes an ancillary to be removed from the character,ancillary record key
+effects - the `effect` table; these CHANGE game state,remove_trait,008E9F50,Tom,,"remove_trait(""drink"")","Removes the specified trait (all levels), unless character has got passed ""no going back"" level of trait",trait key
+effects - the `effect` table; these CHANGE game state,rewind_scripted_advice,00E2A5A0,Guy,,rewind_scripted_advice(),"Resets all the scripted advice threads, such as those in the campaign tutorials, to zero",None
+effects - the `effect` table; these CHANGE game state,suspend_contextual_advice,00E2EA40,Guy,,suspend_contextual_advice(true),Prevents contextual advice from being displayed - useful for tutorials,Flag
+effects - the `effect` table; these CHANGE game state,trait,008F5070,Tom,,"trait(""drink"", 5, 20)",Possibly adds the points supplied to the trait listed for the given character,"trait key, points to add, chance of adding"
+campaign UI commands (the CampaignUI global),AgentCardSelectionChanged,009DCAC0,,,,In: Agent pointer.  Notify the UI that an agent card has been selected so that the selection context can be updated,""
+campaign UI commands (the CampaignUI global),AgentEmbarkOrDisembark,009DCB00,,,,,""
+campaign UI commands (the CampaignUI global),AgentGentlemanDuel,009DCB90,,,,,""
+campaign UI commands (the CampaignUI global),AgentRakeAssassinate,009DCC90,,,,,""
+campaign UI commands (the CampaignUI global),AgentRakeSubterfuge,009DCE40,,,,,""
+campaign UI commands (the CampaignUI global),AgentRogueSabotageArmy,009DCED0,,,,,""
+campaign UI commands (the CampaignUI global),AttachMovieToComponent,009DCFD0,,,,"In: Component to attach to, Path to movie to play",""
+campaign UI commands (the CampaignUI global),AttachRadarView,009DD050,,,,In: Component to attach to,""
+campaign UI commands (the CampaignUI global),AutoManage,009DD090,,,,,""
+campaign UI commands (the CampaignUI global),AvailableCommandersForRecruitment,009DD0C0,,,,,""
+campaign UI commands (the CampaignUI global),BattleResultsRefresh,009DD460,,,,Refresh data for the battle results screen,""
+campaign UI commands (the CampaignUI global),BattleSetupShip,009DD510,,,,,""
+campaign UI commands (the CampaignUI global),BattleSetupShipFromRecord,009DD590,,,,,""
+campaign UI commands (the CampaignUI global),BattleSetupUnit,009DD630,,,,,""
+campaign UI commands (the CampaignUI global),BattleSetupUnitFromRecord,009DD6B0,,,,,""
+campaign UI commands (the CampaignUI global),BeginConstruction,009DD750,,,,Begins construction of a building,""
+campaign UI commands (the CampaignUI global),BeginResearch,009DD7C0,,,,Start a university researching a technology,""
+campaign UI commands (the CampaignUI global),BeginStealing,009DDA50,,,,Start a character stealing a technology,""
+campaign UI commands (the CampaignUI global),BeginUpgrade,009DD750,,,,Begins upgrading of a building,""
+campaign UI commands (the CampaignUI global),BuildFort,009DDD00,,,,,""
+campaign UI commands (the CampaignUI global),BuildingBrowserDetails,009DDD40,,,,Fills in a building browser details table,""
+campaign UI commands (the CampaignUI global),BuildingDetails,009DDD50,,,,initialises a table of details about the building specified,""
+campaign UI commands (the CampaignUI global),BuildingEffects,009DE150,,,,Fills in a table with a table list for each effects class,""
+campaign UI commands (the CampaignUI global),BuildingPointer,009DF990,,,,,""
+campaign UI commands (the CampaignUI global),BuildingRecordDetails,009DFAF0,,,,initialises a table of details about the building specified,""
+campaign UI commands (the CampaignUI global),CameraManager,009DFE10,,,,Out: Pointer to the camera manager,""
+campaign UI commands (the CampaignUI global),CameraPosition,009DFE50,,,,"Out: x,y,z of current camera position",""
+campaign UI commands (the CampaignUI global),CameraTarget,009DFEC0,,,,"Out: x, y, z of current cameras target, y (height) is the zoom level",""
+campaign UI commands (the CampaignUI global),CameraView,009DFFD0,,,,Out: Bounding box of camera current view,""
+campaign UI commands (the CampaignUI global),CampaignIsEpisodic,009E0570,,,,Out: Returns true if the current played cmapign is an episodic,""
+campaign UI commands (the CampaignUI global),CampaignKey,009E05E0,,,,Out: Return the database key for the current campaign,""
+campaign UI commands (the CampaignUI global),CampaignModel,009E0640,,,,Out: Pointer to the campaign model,""
+campaign UI commands (the CampaignUI global),CanAgentEmbarkOrDisembark,009E0680,,,,,""
+campaign UI commands (the CampaignUI global),CanArmyEmbarkOrDisembark,009E07B0,,,,,""
+campaign UI commands (the CampaignUI global),CanDemolishBuilding,009E0930,,,,,""
+campaign UI commands (the CampaignUI global),CanDemoteUnit,009E0990,,,,,""
+campaign UI commands (the CampaignUI global),CanDisbandUnit,009E09F0,,,,,""
+campaign UI commands (the CampaignUI global),CanEndTurn,009E0A40,,,,Can the player end the turn at this time?,""
+campaign UI commands (the CampaignUI global),CanHostDropin,009E0A90,,,,Out: False if you cannot host a dropin battles (i.e. if Steam is running in offline mode),""
+campaign UI commands (the CampaignUI global),CanPromoteUnit,009E0AF0,,,,,""
+campaign UI commands (the CampaignUI global),CanRecruitCommander,009E0B40,,,,,""
+campaign UI commands (the CampaignUI global),CanResearch,009E0BE0,,,,Can a university research this tech,""
+campaign UI commands (the CampaignUI global),CanSackMinister,009E0D10,,,,,""
+campaign UI commands (the CampaignUI global),CanSave,009E0D50,,,,Out: boolean flag to say if it is possible to save the campaign at this point,""
+campaign UI commands (the CampaignUI global),CanSteal,009E0D90,,,,Can a character steal some tech,""
+campaign UI commands (the CampaignUI global),CanUnitsMerge,009E0E90,,,,"In: 2 unit pointers.  Out:  True if 2nd unit can merge into first, false if not",""
+campaign UI commands (the CampaignUI global),CancelConstruction,009E0F10,,,,Cancels construction of a building,""
+campaign UI commands (the CampaignUI global),CancelFortRepair,009E0F80,,,,Cancels repairing of a fort!,""
+campaign UI commands (the CampaignUI global),CancelOrderForSelectedCharacter,009E1010,,,,the currently selected character has it's order cancelled,""
+campaign UI commands (the CampaignUI global),CancelRecruitment,009E1090,,,,Removes a siege equipment item from the queue in the specified slot,""
+campaign UI commands (the CampaignUI global),CancelResearch,009E10D0,,,,Stop a university researching a technology,""
+campaign UI commands (the CampaignUI global),CancelSiegeEquipment,009E1170,,,,Removes a recruited unit from the recruitment queue in the specified slot,""
+campaign UI commands (the CampaignUI global),CancelStealing,009E11B0,,,,Stop a character stealing a technology,""
+campaign UI commands (the CampaignUI global),CancelUpgradeFort,009E1240,,,,,""
+campaign UI commands (the CampaignUI global),ChanceToSteal,009E1280,,,,Returns the chance to steal a technology,""
+campaign UI commands (the CampaignUI global),ChangeAdviceAudioMode,009E13F0,,,,Repeat the current advice on the c++ side,""
+campaign UI commands (the CampaignUI global),ChangeAdviceTextMode,009E1430,,,,Repeat the current advice on the c++ side,""
+campaign UI commands (the CampaignUI global),ChangeIngameOptions,009E1470,,,,Current game options will be read from preferences and sent to the game,""
+campaign UI commands (the CampaignUI global),CharacterInEnemyResidence,009E1680,,,,,""
+campaign UI commands (the CampaignUI global),CharacterInValidEnemyUniversity,009E1700,,,,,""
+campaign UI commands (the CampaignUI global),CharacterPointer,009E17C0,,,,,""
+campaign UI commands (the CampaignUI global),CharacterResidence,009E1820,,,,,""
+campaign UI commands (the CampaignUI global),CharacterSelectionChangeWithinGarrison,009E1870,,,,Uses a unit from the army or navy tab to set the selection contexts character,""
+campaign UI commands (the CampaignUI global),CharacterSelectionClearWithinGarrison,009E18F0,,,,Resets the select context back to the garrison type only,""
+campaign UI commands (the CampaignUI global),CharactersRelationshipToPlayersFaction,009E1900,,,,,""
+campaign UI commands (the CampaignUI global),ClearSecondarySelectionContext,009E19A0,,,,"Clears any secondary selection context based on the primary selection context. Eg. Clears agents for characters, clears characters for slots.",""
+campaign UI commands (the CampaignUI global),ClosestRegionToCamera,009E19B0,,,,Returns the closest region to the camera in the list,""
+campaign UI commands (the CampaignUI global),ClosestSlotToCamera,009E1B30,,,,Returns the closest slot to the camera in the list,""
+campaign UI commands (the CampaignUI global),ConstructBuildingTree,009E1CB0,,,,,""
+campaign UI commands (the CampaignUI global),ContinueGameSelected,009E1D20,,,,Player chose to continue the game when presented with the Continue Game/End Game dialog after victory conditions achieved,""
+campaign UI commands (the CampaignUI global),CurrentFactionIsHuman,009E1D90,,,,Returns whether the faction whose turn it is is controlled by a human or not,""
+campaign UI commands (the CampaignUI global),CurrentGameOptions,009E1DD0,,,,Out: Table of options as set in the players setup,""
+campaign UI commands (the CampaignUI global),CurrentSeasonString,009E1F70,,,,Returns the current season name in string!,""
+campaign UI commands (the CampaignUI global),CurrentTurn,009E1FE0,,,,Out: Reports the current turn number,""
+campaign UI commands (the CampaignUI global),CurrentYear,009E2010,,,,Returns the current year for the grand campaign or the turn number for episodics,""
+campaign UI commands (the CampaignUI global),DebugMessage,00461180,,,,In: msg to show (debug only),""
+campaign UI commands (the CampaignUI global),DebugViewLuaComponentPtr,009E2070,,,,Passes a component point out to C so we can view it in debug,""
+campaign UI commands (the CampaignUI global),DeclareWarInstant,009E2090,,,,"Instantly declare war without going through diplomatic process.  Takes two faction keys, faction A will declare war on faction B.  No responses will be given",""
+campaign UI commands (the CampaignUI global),DeclineSidingWithAlly,009E21D0,,,,In: (Opt) Faction key of ally they aren't siding with. Local player declines a request to side with the ally.  If faction isn't present then declines both allies,""
+campaign UI commands (the CampaignUI global),DefaultSaveName,009E22C0,,,,Out: String containing the default save game name for this campaign,""
+campaign UI commands (the CampaignUI global),DefaultSaveNameMP,009E2320,,,,Out: String containing the default MP save game name for this campaign,""
+campaign UI commands (the CampaignUI global),DemolishBuilding,009E2380,,,,Demolishes the selected building,""
+campaign UI commands (the CampaignUI global),DemolishFort,009E23D0,,,,,""
+campaign UI commands (the CampaignUI global),DemoteAdmiral,009E2410,,,,,""
+campaign UI commands (the CampaignUI global),DisbandUnit,009E2450,,,,Disbands the specified unit,""
+campaign UI commands (the CampaignUI global),DismissAdvice,009E2490,,,,Dismiss the current advice.,""
+campaign UI commands (the CampaignUI global),DismissCurrentAdvice,009E24B0,,,,Dismisses the current advice on the c++ side,""
+campaign UI commands (the CampaignUI global),DisplayingTurns,009E24D0,,,,Out: Returns true if the current campaigns date should be displayed as turns,""
+campaign UI commands (the CampaignUI global),DropInInterface,009E2510,,,,Out: Pointer to a dropin interface to be passed to UIMPInterface object,""
+campaign UI commands (the CampaignUI global),EnableShortcutHandler,009E2550,,,,In: true/false to enable/disable all keyboard shortcuts,""
+campaign UI commands (the CampaignUI global),EnableVoiceChat,009E2590,,,,In: true/false to start/stop voice chat,""
+campaign UI commands (the CampaignUI global),EndTurn,009E25F0,,,,No documentation,""
+campaign UI commands (the CampaignUI global),EnqueueSiegeEquipment,009E2600,,,,Places a siege equipment item in the queue,""
+campaign UI commands (the CampaignUI global),EnterRevolutionaryRegion,009E2650,,,,In: ,""
+campaign UI commands (the CampaignUI global),EntityTypeSelected,009E27D0,,,,Returns a table with a valid boolean entry for the type of entity selected,""
+campaign UI commands (the CampaignUI global),EnumerateCampaignSaves,0046D970,,,,"In: Save game directory, file extension, Out: Table of details about each save game found in the directory",""
+campaign UI commands (the CampaignUI global),EnumerateMultiplayerCampaignSaves,009E2BD0,,,,"In: Save game directory, file extension, Out: Table of details about each save game found in the directory",""
+campaign UI commands (the CampaignUI global),ExitPreBattleContinuingSiege,009E2C10,,,,The player chose to continue sieging,""
+campaign UI commands (the CampaignUI global),FactionDetails,009E2CB0,,,,"Retrieve some details about the given faction (name, flag path, leader etc) - pass in faction db id",""
+campaign UI commands (the CampaignUI global),FactionsUniversities,009E2F60,,,,A list of a factions universities or educational facilities,""
+campaign UI commands (the CampaignUI global),FileExtenstionAndPathForWriteClass,009E3130,,,,"In: string identifying OSFS_WRITECLASS.  Out: File extension used by that class, directory files are kept in",""
+campaign UI commands (the CampaignUI global),Finalise,009E3270,,,,,""
+campaign UI commands (the CampaignUI global),FinaliseDuel,009E33C0,,,,Finishes a duel.  Weapon type should have been selected,""
+campaign UI commands (the CampaignUI global),FinaliseExchange,009E3480,,,,Gathers the list of units/agents/etc that are to be exchanged,""
+campaign UI commands (the CampaignUI global),FinaliseMoveTransition,009E43A0,,,,"In: Character to move, Units to move, Position moving from, Index of transition area to move to.",""
+campaign UI commands (the CampaignUI global),FinalisePendingAction,009E4820,,,,Called from various places to complete the pending action,""
+campaign UI commands (the CampaignUI global),FinalisePendingDuel,009E4890,,,,"Finalise a duel, more specific version of the above command",""
+campaign UI commands (the CampaignUI global),FormatString,009E4900,,,,"In: Formating string, string to format into it. Out: Formatted version",""
+campaign UI commands (the CampaignUI global),FortDetails,009E49D0,,,,initialises a table of details about the fort specified,""
+campaign UI commands (the CampaignUI global),FortEffects,009E4AA0,,,,Fills in a table with a table list for each effects class,""
+campaign UI commands (the CampaignUI global),GentlemanStealing,009E4B90,,,,Fills in a technology record table,""
+campaign UI commands (the CampaignUI global),GetCurrentGameInfo,009E4BB0,,,,Out: Details about the current state of the game for the save game dialog,""
+campaign UI commands (the CampaignUI global),GetCurrentMPGameInfo,009E4C50,,,,Out: Details about the current state of the game for the save game dialog,""
+campaign UI commands (the CampaignUI global),GetDropinFriendPref,009E4D10,,,,Out: Returns true/false depending on whether the player only wants friends in their dropin battles,""
+campaign UI commands (the CampaignUI global),GetExtendedMPSaveGameInfo,004704D0,,,,"In: Path to save game, Out: Table of extra details about that save game",""
+campaign UI commands (the CampaignUI global),GetExtendedSaveGameInfo,004705E0,,,,"In: Path to save game, Out: Table of extra details about that save game",""
+campaign UI commands (the CampaignUI global),GovernorshipList,009E4D50,,,,Returns a table of entries containing details of all governorships for a given faction,""
+campaign UI commands (the CampaignUI global),HighlightConstructionItem,009E5000,,,,,""
+campaign UI commands (the CampaignUI global),HighlightRecruitmentItem,009E5080,,,,,""
+campaign UI commands (the CampaignUI global),HoldElections,009E5100,,,,Hold elections immeadiately,""
+campaign UI commands (the CampaignUI global),HomeTheatre,009E5180,,,,Return the db key of the theatre containing the home region of the faction specified,""
+campaign UI commands (the CampaignUI global),InformAdviceReachedRender,009E5240,,,,repeat the curently played advice,""
+campaign UI commands (the CampaignUI global),InformLootingSelection,009E5280,,,,Informs the UI of the looting selection,""
+campaign UI commands (the CampaignUI global),InitialiseCharacterDetails,009E5300,,,,initialises a table of details about the character specified,""
+campaign UI commands (the CampaignUI global),InitialiseGovernmentDetails,009E54D0,,,,Creates a table containing information about the government,""
+campaign UI commands (the CampaignUI global),InitialiseRecruitableUnitDetails,009E6010,,,,,""
+campaign UI commands (the CampaignUI global),InitialiseRegionInfoDetails,009E69B0,,,,"Returns a table of information about a given region (supplied by address).  If no address is supplied, then the current selected region is used",""
+campaign UI commands (the CampaignUI global),InitialiseTechDetails,009EAF30,,,,initialises a table of details about the tech specified,""
+campaign UI commands (the CampaignUI global),InitialiseUnitDetails,009EB470,,,,"Parameter passed can be either a UNIT*, a CAMPAIGN_CARD string id or a UNIT_RECORD string id",""
+campaign UI commands (the CampaignUI global),InstigateAssassination,009EC1E0,,,,"In: Attacker, target (character pointers). Issues an assassination order",""
+campaign UI commands (the CampaignUI global),InstigateDuel,009EC290,,,,"In: Attacker, target (character pointers). Issues a duel order",""
+campaign UI commands (the CampaignUI global),InstigateSabotage,009EC340,,,,"In: Attacker, target building.  Issues the sabotage order",""
+campaign UI commands (the CampaignUI global),InviteAlliesIntoWar,009EC420,,,,Called after the player acknowledged that another faction has declared war on them,""
+campaign UI commands (the CampaignUI global),IsAudioPlaying,009EC4B0,,,,repeat the curently played advice,""
+campaign UI commands (the CampaignUI global),IsCharacterInPortResidence,009EC500,,,,,""
+campaign UI commands (the CampaignUI global),IsCharacterPlayerControlled,009EC590,,,,,""
+campaign UI commands (the CampaignUI global),IsConstructionItemHighlighted,009EC5F0,,,,,""
+campaign UI commands (the CampaignUI global),IsMergingUnit,009EC670,,,,,""
+campaign UI commands (the CampaignUI global),IsMultiplayer,009EC6C0,,,,Out: true/false - Are we playing a multiplayer campaign,""
+campaign UI commands (the CampaignUI global),IsMultiplayerOttomansFrenchDiplomacy,009EC6F0,,,,Returns true if the factions attempting to enter into diplomacy are the Ottomans and France in a multiplayer game,""
+campaign UI commands (the CampaignUI global),IsPlayersTurn,009EC8D0,,,,Returns a boolean to say whether or not it is currently the human players turn,""
+campaign UI commands (the CampaignUI global),IsRecruitmentItemHighlighted,009EC920,,,,,""
+campaign UI commands (the CampaignUI global),IsTimedMultiplayer,009EC9A0,,,,,""
+campaign UI commands (the CampaignUI global),IsTimedMultiplayerGame,009EC9A0,,,,,""
+campaign UI commands (the CampaignUI global),IsUnitMergePossible,009EC9D0,,,,Out: Bool.  Are unit merges allowed at the moment,""
+campaign UI commands (the CampaignUI global),KickMinister,009ECA10,,,,In: Address of character that we want to kick,""
+campaign UI commands (the CampaignUI global),ListOfPlayersInGame,009ECAA0,,,,Out: A table of the players,""
+campaign UI commands (the CampaignUI global),LoadCampaign,009ECDA0,,,,In: Full path to save game file,""
+campaign UI commands (the CampaignUI global),LocalisationString,009ECEA0,,,,Retrieve a string from the random localisation strings table,""
+campaign UI commands (the CampaignUI global),MPChangeIngameOptions,009ED010,,,,Current game options will be read from table provided and sent to the network,""
+campaign UI commands (the CampaignUI global),MPInviteToGame,009ED230,,,,In: Array of Steam Player Id's.,""
+campaign UI commands (the CampaignUI global),MPOnlinePresence,009ED2D0,,,,Out: Return a pointer to the online prescence,""
+campaign UI commands (the CampaignUI global),MPSaveGame,009ED310,,,,"In: bool.  Overwrite if file exists.  String: ""filename"". Saves a multiplayer campaign game.  The filename field is actually encoded in the header and wont be the name the file is saved as",""
+campaign UI commands (the CampaignUI global),MergeUnits,009ED450,,,,Merges all of the units in this table. This method is used when the merge is caused by the merge key being pressed.,""
+campaign UI commands (the CampaignUI global),MergeUnitsWithFirst,009ED660,,,,Merges all of the units in this table into the first. This Method is used for the dropping of cards onto another.,""
+campaign UI commands (the CampaignUI global),MinisterPortraitPath,009ED8A0,,,,"In: Faction key, Out: Path to a ""random"" ministers portrait",""
+campaign UI commands (the CampaignUI global),MissionsDetails,009EDA20,,,,,""
+campaign UI commands (the CampaignUI global),MonarchyInfo,009EDA40,,,,,""
+campaign UI commands (the CampaignUI global),MoveIntoTarget,009EE150,,,,"In: Character (agent), character or settlement (target), bool (research - steal if enemy settlement)",""
+campaign UI commands (the CampaignUI global),MovieDismissed,009EE380,,,,Movie dismissed by Player,""
+campaign UI commands (the CampaignUI global),MultiplayerBaseInterface,009EE390,,,,Out: Pointer to the multiplayer control module (to be passed to UIMPInterface object,""
+campaign UI commands (the CampaignUI global),MultiplayerBattleSelectionComplete,009EE3D0,,,,Winks to the other player that this player has made his battle selection,""
+campaign UI commands (the CampaignUI global),MultiplayerDropInInterface,009E2510,,,,Out: Pointer to the dropin interface,""
+campaign UI commands (the CampaignUI global),MultiplayerOtherPlayersName,009EE410,,,,The name of the non local player,""
+campaign UI commands (the CampaignUI global),MultiplayerPlayerOutOfTurn,009EE4E0,,,,Returns true if this machine is a human player whos turn is it not,""
+campaign UI commands (the CampaignUI global),MultiplayerPlayersName,009EE550,,,,The name of this player,""
+campaign UI commands (the CampaignUI global),MultiplayerPostBattleDismissed,009EE5F0,,,,Winks to the other player that this player has made his battle selection,""
+campaign UI commands (the CampaignUI global),MultiplayerSaveConfirm,009EE610,,,,Winks to the other player to drop the save message,""
+campaign UI commands (the CampaignUI global),MultiplayerTimeIsUp,009EE630,,,,,""
+campaign UI commands (the CampaignUI global),MultiplayerTurnTimer,009EE640,,,,,""
+campaign UI commands (the CampaignUI global),MultiplayerTurnTimespan,009EE750,,,,,""
+campaign UI commands (the CampaignUI global),MultiplayerUnlimitedTurnBeginConfirm,009EE7C0,,,,,""
+campaign UI commands (the CampaignUI global),NavalUnitLimit,009EE7D0,,,,Out: Returns the maximum number of units allowed in a navy,""
+campaign UI commands (the CampaignUI global),NextAdvice,009EE800,,,,display the next piece of advice,""
+campaign UI commands (the CampaignUI global),NextAutoEntitySelection,009EE820,,,,Moves the auto viewer to the next entity,""
+campaign UI commands (the CampaignUI global),NextAutoSettlementSelection,009EE830,,,,Moves the auto viewer to the next settlement,""
+campaign UI commands (the CampaignUI global),NextExportTradeProblem,009EE8B0,,,,Moves the camera to the next position on a trade route causing reduced trade income,""
+campaign UI commands (the CampaignUI global),NextSupplyTradeProblem,009EE900,,,,Moves the camera to the next position on a trade route causing reduced trade income,""
+campaign UI commands (the CampaignUI global),OptimizeShip,009EE950,,,,Optimizes the ships crew,""
+campaign UI commands (the CampaignUI global),PauseCampaign,009EE9C0,,,,"In: Boolean, pause/unpause",""
+campaign UI commands (the CampaignUI global),PlayDropInBattle,009EEA50,,,,"In: is_land, is_siege, Out: Starts up hosting a drop in battle",""
+campaign UI commands (the CampaignUI global),PlayerChoosesRevolutionSide,009EEAA0,,,,,""
+campaign UI commands (the CampaignUI global),PlayerFactionId,009EEB50,,,,Retrieve the db key of the players faction (can be passed to GetFactionDetails etc,""
+campaign UI commands (the CampaignUI global),PlayerFactionIsTribal,009EEBB0,,,,,""
+campaign UI commands (the CampaignUI global),PlayerHasFunds,009EEC10,,,,Checks the player has enough funds,""
+campaign UI commands (the CampaignUI global),PlayerIgnoresBankruptcy,009EEC70,,,,,""
+campaign UI commands (the CampaignUI global),PlayerInControl,009EECA0,,,,In: nothing. Out: bool if player is in control.,""
+campaign UI commands (the CampaignUI global),PlayerOwnedUnit,009EECE0,,,,,""
+campaign UI commands (the CampaignUI global),PlayerPlayingAsRevolutionaries,009EED40,,,,Out:  True if the player sided with the revolutionaries after a revolution,""
+campaign UI commands (the CampaignUI global),PlayerSelected,009EEDA0,,,,"In: none, Out: true if player action caused the last object selected event",""
+campaign UI commands (the CampaignUI global),PlayerSidesWithRevolutionaries,009E2070,,,,,""
+campaign UI commands (the CampaignUI global),PlayerSurrenderDecision,009EEDD0,,,,,""
+campaign UI commands (the CampaignUI global),PlayerUnitTypeCount,009EEEB0,,,,,""
+campaign UI commands (the CampaignUI global),PlayersCulture,009EEF10,,,,Out: string (players culture database key,""
+campaign UI commands (the CampaignUI global),PlayersFaction,009EEF70,,,,Passes the players facition ptr to lua,""
+campaign UI commands (the CampaignUI global),PlayersFactionKey,009EEFB0,,,,Passes the players facition key to lua,""
+campaign UI commands (the CampaignUI global),PostNavalBattleRefresh,009DD460,,,,,""
+campaign UI commands (the CampaignUI global),PostNavalBattleSetupValid,009EF010,,,,Is the setup valid in its current state,""
+campaign UI commands (the CampaignUI global),PreBattleAttack,009EF060,,,,Start the battle immediately,""
+campaign UI commands (the CampaignUI global),PreBattleAutoResolve,009EF070,,,,Auto resolve the battle,""
+campaign UI commands (the CampaignUI global),PreBattleDemandSurrender,009EF080,,,,Demand the besieged surrender,""
+campaign UI commands (the CampaignUI global),PreBattleNightAttack,009EF130,,,,Fight the battle during night-time,""
+campaign UI commands (the CampaignUI global),PreBattleRetreat,009EF140,,,,Retreat from the attack,""
+campaign UI commands (the CampaignUI global),PreBattleSiegeAttack,009EF1F0,,,,,""
+campaign UI commands (the CampaignUI global),PreBattleSiegeAutoResolve,009EF250,,,,,""
+campaign UI commands (the CampaignUI global),PreBattleSiegeNightAttack,009EF250,,,,,""
+campaign UI commands (the CampaignUI global),PrestigeDetails,009EF290,,,,Fills in a prestige details table,""
+campaign UI commands (the CampaignUI global),PreviousAdvice,009EF2B0,,,,display the previous piece of advice,""
+campaign UI commands (the CampaignUI global),PreviousAutoEntitySelection,009EF2D0,,,,Moves the auto viewer to the previous entity,""
+campaign UI commands (the CampaignUI global),PreviousAutoSettlementSelection,009EF2E0,,,,Moves the auto viewer to the previous settlement,""
+campaign UI commands (the CampaignUI global),PromoteUnits,009EF360,,,,,""
+campaign UI commands (the CampaignUI global),QuickLoad,009EF420,,,,Loads the most recently saved campaign game,""
+campaign UI commands (the CampaignUI global),QuickSave,009EF470,,,,Campaign will be saved to the default quick save location,""
+campaign UI commands (the CampaignUI global),QuitToMainScreen,009EF630,,,,No documentation,""
+campaign UI commands (the CampaignUI global),QuitToWindowsFromEscapeMenu,009EF640,,,,No documentation,""
+campaign UI commands (the CampaignUI global),RadarZoomIn,009EF650,,,,Sets the radar zoom level if possible,""
+campaign UI commands (the CampaignUI global),RadarZoomOut,009EF6C0,,,,Sets the radar zoom level if possible,""
+campaign UI commands (the CampaignUI global),RecruitUnit,009EF730,,,,Places a recruitable unit in the recruitment queue,""
+campaign UI commands (the CampaignUI global),RegimentName,009EF7A0,,,,,""
+campaign UI commands (the CampaignUI global),RegionFromSelection,009EF800,,,,,""
+campaign UI commands (the CampaignUI global),RegionKeyFromAddress,009EF9C0,,,,,""
+campaign UI commands (the CampaignUI global),RegionKeyFromSlot,009EFA40,,,,,""
+campaign UI commands (the CampaignUI global),RegionTaxDetails,009EFAC0,,,,"In: Region pointer, Out: Table of details about wealth and taxes for this region",""
+campaign UI commands (the CampaignUI global),RegionsGovernorship,009EFBC0,,,,Takes the address of a region and returns the name of the governorship that the region is in,""
+campaign UI commands (the CampaignUI global),RegionsInTheatre,009EFC30,,,,Initialise a table with details about each region in the specified theatre,""
+campaign UI commands (the CampaignUI global),RegionsOwnedByFactionOrByProtectorates,009F0DA0,,,,Initialise a table listing all regions owned by a faction by address and localised name,""
+campaign UI commands (the CampaignUI global),RegionsPublicOrders,009F11D0,,,,Returns the public order in the region,""
+campaign UI commands (the CampaignUI global),RemainingTimeToDrop,009F12B0,,,,,""
+campaign UI commands (the CampaignUI global),RepairBuilding,009F1300,,,,Repairs the selected building,""
+campaign UI commands (the CampaignUI global),RepairFort,009F1370,,,,,""
+campaign UI commands (the CampaignUI global),RepeatAdvice,009F13B0,,,,Repeat the current advice on the c++ side,""
+campaign UI commands (the CampaignUI global),RequestAssassinationTargets,009F13D0,,,,"In: Character performing the action, Character or Garrison residence pointer.  Out.  Table of suitable characters.  Ask the game for suitable sabotage targets and show the sabotage target picker",""
+campaign UI commands (the CampaignUI global),RequestDuelTargets,009F18D0,,,,"In: Character performing the action, Character or Garrison residence pointer.  Out.  Table of suitable characters.  Ask the game for suitable sabotage targets and show the sabotage target picker",""
+campaign UI commands (the CampaignUI global),RequestSabotageTargets,009F1D00,,,,"In: Character performing the action, Garrison residence pointer.  Out.  Table of suitable buildings.  Ask the game for suitable sabotage targets and show the sabotage target picker",""
+campaign UI commands (the CampaignUI global),RetrieveContainedEntitiesFromCharacter,009F20A0,,,,Retrieve various lists of exchangeable entities from the character,""
+campaign UI commands (the CampaignUI global),RetrieveContainedEntitiesFromGarrison,009F2380,,,,Retrieve various lists of exchangeable entities from the garrison,""
+campaign UI commands (the CampaignUI global),RetrieveDiplomacyDetails,009F2750,,,,"Return a table containing allies, enemies and trade partners of the given faction",""
+campaign UI commands (the CampaignUI global),RetrieveDiplomaticOpinions,009F2830,,,,Return 2 strings representing each factions opinion of each other,""
+campaign UI commands (the CampaignUI global),RetrieveDiplomaticStanceString,009F29D0,,,,Takes the db keys for two factions and returns a string representing the diplomatic stance of them (i.e. at war etc),""
+campaign UI commands (the CampaignUI global),RetrieveExistingTreaties,009F2B80,,,,Returns any treaties in place between the 2 factions,""
+campaign UI commands (the CampaignUI global),RetrieveFactionAgentsList,009F2CE0,,,,"In: Faction key, Out: List of details of all agents in the faction specified",""
+campaign UI commands (the CampaignUI global),RetrieveFactionListForDiplomacy,009F2EA0,,,,Builds a table with a few details about each faction in the game,""
+campaign UI commands (the CampaignUI global),RetrieveFactionMilitaryForceLists,009F3CF0,,,,"In: Faction, bool ( true = armies/ false = navies, Out: Retrieves the details of all the military forces of the types specified for the given faction",""
+campaign UI commands (the CampaignUI global),RetrieveFactionRegionList,009F3FD0,,,,"In: Faction key, Out: Table of all regions owned by faction",""
+campaign UI commands (the CampaignUI global),RetrieveGameCore,009F4190,,,,Out: Returns pointers to the game core so that a UIPrefsInterface object can be initialised,""
+campaign UI commands (the CampaignUI global),RetrieveGovernorshipDetails,009F41D0,,,,Get the details for a given governorship.  Need to pass in the name of the governorship,""
+campaign UI commands (the CampaignUI global),RetrieveRemainingMilitaryAccessTurns,009F4380,,,,Returns the remaining value of the military access,""
+campaign UI commands (the CampaignUI global),RetrieveVisibleEnitityDetails,009F4520,,,,"Returns the details of all the campaign map entities (settlements, characters etc), that are currently visible in the camera view",""
+campaign UI commands (the CampaignUI global),ReturnToCampaignFromEscapeMenu,00461180,,,,No documentation,""
+campaign UI commands (the CampaignUI global),RevertShipsToPrize,009F47B0,,,,Moves ships back to the prize pool,""
+campaign UI commands (the CampaignUI global),ReviewPanelInfo,009F4890,,,,,""
+campaign UI commands (the CampaignUI global),ReviewPanelTabSelectionSet_1_Indexed,009F48E0,,,,Invokes a tab selection for the review panel,""
+campaign UI commands (the CampaignUI global),SabotageArmy,009F4910,,,,"In: Character (agent), target character (general)",""
+campaign UI commands (the CampaignUI global),SaveCampaign,009F4A20,,,,"In: Full path to place to save game, bool: Confirm overwrite. Out: true if overwrite request is requested and needed.  false, save success if overwrite not requested or not needed",""
+campaign UI commands (the CampaignUI global),ScreenSize,009F4B90,,,,Retrieve the current width and height of the screen,""
+campaign UI commands (the CampaignUI global),ScrollCamera,009F4C00,,,,"scroll the camera along a spline. ScrollCamera(seconds_it_takes_to_complete, list_of_coodinates...)",""
+campaign UI commands (the CampaignUI global),ScupperToggleShip,009F5270,,,,Scuppers or Unscuppers the ship,""
+campaign UI commands (the CampaignUI global),SelectAndZoomToCharacter,009F5300,,,,"In: The horizontal focus position, EG. -1 for right centred and +1 for left centred. Address of a character to select",""
+campaign UI commands (the CampaignUI global),SelectAndZoomToNextRegion,009F5440,,,,,""
+campaign UI commands (the CampaignUI global),SelectAndZoomToPreviousRegion,009F55C0,,,,,""
+campaign UI commands (the CampaignUI global),SelectAndZoomToRegion,009F5740,,,,In: Address of a region to select (actually selects settlement),""
+campaign UI commands (the CampaignUI global),SelectAndZoomToSlot,009F5870,,,,"In: The horizontal focus position, EG. -1 for right centred and +1 for left centred. Key of a region. Key of a slot to select",""
+campaign UI commands (the CampaignUI global),SetAutomanageConstruction,009F5B00,,,,Switches on/off the automanagement of the construction for a specified theatre,""
+campaign UI commands (the CampaignUI global),SetAutomanageTaxes,009F5C30,,,,Switches on/off the automanagement of the taxes for a specified theatre,""
+campaign UI commands (the CampaignUI global),SetCameraTarget,009F5D60,,,,"Move the camera to the look at the specified theatre/map position.  Takes either the name of the theatre, or x, y position, + optional positioning factor (-1 = right centred, +1 = left centered)",""
+campaign UI commands (the CampaignUI global),SetCameraTargetInstant,009F5F00,,,,"Move the camera to the look at the specified theatre/map position instantly.  Takes either the name of the theatre, or x, y position, + optional positioning factor (-1 = right centred, +1 = left centered)",""
+campaign UI commands (the CampaignUI global),SetCameraZoom,009F6070,,,,"Zoom the camera, takes a float, currently clamped at 1.2 - 0.675, see CAMPAIGN_CAMERA_MAXIMUM_TILT_ANGLE and CAMPAIGN_CAMERA_MINIMUM_TILT_ANGLE",""
+campaign UI commands (the CampaignUI global),SetDropinFriendPref,009F60C0,,,,In: true/false to set whether the player only wants friends in their dropin battles,""
+campaign UI commands (the CampaignUI global),SetGovernorshipTaxRate,009F6100,,,,Sets the tax rate for a specified class and theatre,""
+campaign UI commands (the CampaignUI global),SetMyUnitName,009F6280,,,,,""
+campaign UI commands (the CampaignUI global),SetRegionTaxed,009F6370,,,,Sets the region to be taxed (or not),""
+campaign UI commands (the CampaignUI global),SetReinforcementsOrder,009F6420,,,,Sets the reinforcement order for a combatant character,""
+campaign UI commands (the CampaignUI global),SetSuccessor,009F6930,,,,,""
+campaign UI commands (the CampaignUI global),SettlementsRegion,009F6A20,,,,"In: Settlement pointer, Out: Region pointer",""
+campaign UI commands (the CampaignUI global),ShouldShowLabelBottomRow,009F6A70,,,,"In: Settlement pointer, Out: Selected settlement, mouse over settlement",""
+campaign UI commands (the CampaignUI global),ShowBuildingInfoOnDblClick,009F6B80,,,,Dbl click response to clicking on a campaign slot,""
+campaign UI commands (the CampaignUI global),ShowExchangeScreenForDockedNavy,009F6CC0,,,,In: Pointer to commander of either the docked navy or the port garrisoned army,""
+campaign UI commands (the CampaignUI global),ShowVoiceChat,009F6D70,,,,Returns whether voice chat can be displayed,""
+campaign UI commands (the CampaignUI global),SideWithAlly,009F6DB0,,,,In: Faction key of ally to side with,""
+campaign UI commands (the CampaignUI global),SlotKeyFromAddress,009F6E90,,,,,""
+campaign UI commands (the CampaignUI global),SplitFromForce,009F6F10,,,,"Takes a table of unit pointers and a table of character pointers and splits them from their current force, placing them at the map position that the cursor is over",""
+campaign UI commands (the CampaignUI global),SpyingDataLevelCharacter,009F7840,,,,Returns the spying data level for this character,""
+campaign UI commands (the CampaignUI global),SpyingDataLevelUnit,009F7910,,,,Returns the spying data level for this unit,""
+campaign UI commands (the CampaignUI global),StateGiftValues,009F79B0,,,,Out: A table of 3 values representing the various values for state gifts,""
+campaign UI commands (the CampaignUI global),SteamFriendsList,009F7B50,,,,In: Bool - show clan members Out: List of details about appropriate friends listed on Steam,""
+campaign UI commands (the CampaignUI global),StopCamera,009F7D50,,,,Stop a scrolling camera.,""
+campaign UI commands (the CampaignUI global),StopMovieInComponent,009F7D70,,,,In: Component movie is playing in,""
+campaign UI commands (the CampaignUI global),SwapMinisters,009F7DB0,,,,In: Character pointers for minister A & minister B.  Ministers will have their posts swapped,""
+campaign UI commands (the CampaignUI global),TakePrizeShips,009F7E60,,,,Moves captured ships into the navy,""
+campaign UI commands (the CampaignUI global),TechEffects,009F8010,,,,Fills in a table with a table list for each effects class,""
+campaign UI commands (the CampaignUI global),TechnologyPlayerDetails,009F9590,,,,Fills in a technology details table for the players faction,""
+campaign UI commands (the CampaignUI global),TechnologyResearchingDetails,009F9600,,,,Fills in a technology details table for the players faction,""
+campaign UI commands (the CampaignUI global),TechnologyStealingDetails,009F9660,,,,,""
+campaign UI commands (the CampaignUI global),TheatreList,009F96C0,,,,Initialise a table with a list of all theatres available in the game,""
+campaign UI commands (the CampaignUI global),TheatreMapDimensions,009F9760,,,,"Returns the world offset, width & height of the specified theatre map (x, y, w, h)",""
+campaign UI commands (the CampaignUI global),TheatreMapPaths,009F9870,,,,"In: Theatre id, Out: Table containing paths to map, overlay and radar images",""
+campaign UI commands (the CampaignUI global),Time,009F9B80,,,,Returns the current models time in seconds,""
+campaign UI commands (the CampaignUI global),TimeSinceTick,009F9BC0,,,,Returns the time passed since the last communication with the other player,""
+campaign UI commands (the CampaignUI global),ToggleFlagDisplay,009F9C10,,,,Toggles the flag display on the campaign map,""
+campaign UI commands (the CampaignUI global),ToggleLabels,009F9CA0,,,,Toggles that labels under settlements on/off,""
+campaign UI commands (the CampaignUI global),ToggleMoveSpeed,009F9CE0,,,,Toggles the action speed on the campaign map,""
+campaign UI commands (the CampaignUI global),ToggleReplenishUnit,009F9D60,,,,Toggles the replenish or repair command for the specified unit,""
+campaign UI commands (the CampaignUI global),ToggleSFX,009F9E90,,,,Toggles the flag display on the campaign map,""
+campaign UI commands (the CampaignUI global),TradeInfo,009F9F00,,,,Gathers the trade info for the players faction,""
+campaign UI commands (the CampaignUI global),TriggerAdviceForPanel,009FA030,,,,In: Name of panel,""
+campaign UI commands (the CampaignUI global),TriggerBuildingCardSelectedEvent,009FA0D0,,,,In: key of the building selected,""
+campaign UI commands (the CampaignUI global),TriggerBuildingInfoPanelOpenEvent,009FA160,,,,In: ,""
+campaign UI commands (the CampaignUI global),TriggerCharacterInfoPanelOpenedEvent,009FA220,,,,In: Pointer to character,""
+campaign UI commands (the CampaignUI global),TriggerMessageDropEvent,009FA280,,,,Plays the sound that occurs when a message hits the bottom of the msg stack,""
+campaign UI commands (the CampaignUI global),TriggerMessageOpenedEvent,009FA310,,,,In: Message id,""
+campaign UI commands (the CampaignUI global),TriggerPanelClosedEvent,009FA570,,,,In: Name of panel,""
+campaign UI commands (the CampaignUI global),TriggerPanelOpenEvent,009FA640,,,,In: Name of panel,""
+campaign UI commands (the CampaignUI global),TriggerTechnologyInfoPanelOpenEvent,009FA720,,,,In: ,""
+campaign UI commands (the CampaignUI global),TriggerTooltipAdvice,009FA7E0,,,,In: Component that the tooltip currently represents,""
+campaign UI commands (the CampaignUI global),TriggerUnitSelectedEvent,009FA880,,,,In: Pointer to unit selected,""
+campaign UI commands (the CampaignUI global),TurnsToCompleteResearchingTechnology,009FA8E0,,,,Number of turns a character is going to take to finish researching a technology,""
+campaign UI commands (the CampaignUI global),TurnsToResearch,009FA9D0,,,,Returns that how many turns necessary to research the technology,""
+campaign UI commands (the CampaignUI global),UILocalisationString,00479520,,,,Retrieve a string from the ui.loc file,""
+campaign UI commands (the CampaignUI global),UnitPointer,009E17C0,,,,,""
+campaign UI commands (the CampaignUI global),UnitScaleFactor,009FAB10,,,,"In: (Opt) current scale factor, Out: float value representing current unit scale, index into scale factors list : 0-3",""
+campaign UI commands (the CampaignUI global),UnitSelectionChanged,009FABA0,,,,In: List of selected unit.  Notify the UI that the unit selection has changed so the selection context can be updated,""
+campaign UI commands (the CampaignUI global),UnitTransporting,009FAD50,,,,,""
+campaign UI commands (the CampaignUI global),UniversityResearching,009FAE40,,,,Fills in a technology record table,""
+campaign UI commands (the CampaignUI global),UpdateRadarView,009FAE60,,,,In: Table of update details,""
+campaign UI commands (the CampaignUI global),UpgradeFort,009FAE80,,,,,""
+campaign UI commands (the CampaignUI global),Valid,009FAEC0,,,,Is the UI open,""
+campaign UI commands (the CampaignUI global),ValidAsassinationTargetsInResidence,009FAEF0,,,,,""
+campaign UI commands (the CampaignUI global),ValidAssassinationTargets,009FAF40,,,,,""
+campaign UI commands (the CampaignUI global),ValidDuelTargetsInResidence,009FAFC0,,,,,""
+campaign UI commands (the CampaignUI global),ValidSabotageArmyTarget,009FB010,,,,,""
+campaign UI commands (the CampaignUI global),ValidSabotageTarget,009FB060,,,,,""
+campaign UI commands (the CampaignUI global),WindowsTime,009FB0B0,,,,Returns the current windows time in seconds,""
+campaign UI commands (the CampaignUI global),ZoomToAdviceLocation,009FB100,,,,Dismisses the current advice on the c++ side,""
+campaign UI commands (the CampaignUI global),ZoomToCapital,009FB110,,,,Move the camera to your capital,""
+campaign UI commands (the CampaignUI global),ZoomToCharacter,009FB210,,,,In: Address of a character to select,""
+campaign UI commands (the CampaignUI global),ZoomToRegion,009FB330,,,,In: Address of a region to zoom to (without selecting it),""
+campaign UI commands (the CampaignUI global),ZoomToUnit,009FB430,,,,In: Address of a unit to select,""
+campaign UI commands (the CampaignUI global),pending_auto_show_messages,009FB560,,,,Return if any auto shown messages are queued,""
+campaign UI commands (the CampaignUI global),shown_message,009FB5D0,,,,Return if any message boxes currently displayed,""
+battle script commands (battle lua_State only),AddUnitsToGroup,005CDF10,,,,"Takes a table of unit addresses, and a group id and adds the units to the group specified",""
+battle script commands (battle lua_State only),Anchor,005CDFD0,,,,,""
+battle script commands (battle lua_State only),BackProjectPosition,005CDFF0,,,,"In: x,y,z, height adjustment.  Out: x,y z depth to move Component to, distance from camera",""
+battle script commands (battle lua_State only),BattleDetails,005CE0E0,,,,"Get some details about the battle.  For the time being this is whether it is a naval battle, and the players faction details",""
+battle script commands (battle lua_State only),BattleEditorPause,00461180,,,,No documentation,""
+battle script commands (battle lua_State only),BattleEditorUnpause,00461180,,,,No documentation,""
+battle script commands (battle lua_State only),BattleEditorVisibleState,005CE2D0,,,,No documentation,""
+battle script commands (battle lua_State only),Board,005CE2F0,,,,,""
+battle script commands (battle lua_State only),BroadsideMouseEvent,005CE330,,,,,""
+battle script commands (battle lua_State only),Broadside_Left_Issue_Order,005CE450,,,,,""
+battle script commands (battle lua_State only),Broadside_Right_Issue_Order,005CE470,,,,,""
+battle script commands (battle lua_State only),Broadside_Update,005CE490,,,,,""
+battle script commands (battle lua_State only),CameraFocusOnSelection,005CE6A0,,,,Takes the address of a unit.  Zooms the camera over to look at the unit specified.  Doesn't currently work in naval battles,""
+battle script commands (battle lua_State only),CameraZoomTo,005CE960,,,,"In: Position (x,y,z), facing",""
+battle script commands (battle lua_State only),CameraZoomToPictureInPictureLocation,005CEA70,,,,"When the Picture in Picture is displayed, clicking this will zoom the camera to its location",""
+battle script commands (battle lua_State only),CameraZoomToSelection,005CEBC0,,,,Takes the address of a unit.  Zooms the camera over to look at the unit specified.  Doesn't currently work in naval battles,""
+battle script commands (battle lua_State only),CancelOrderForSelection,005CED60,,,,Cancel order for selected units,""
+battle script commands (battle lua_State only),ChangeAdviceAudioMode,00791030,,,,Repeat the current advice on the c++ side,""
+battle script commands (battle lua_State only),ChangeAdviceTextMode,00791070,,,,Repeat the current advice on the c++ side,""
+battle script commands (battle lua_State only),ClearDeployableItemsPanel,005CEE20,,,,checks if a unit is selectable,""
+battle script commands (battle lua_State only),Column_Infantry_Vanguard,005CEE80,,,,,""
+battle script commands (battle lua_State only),CombatRatioDetails,005CEF50,,,,Out: Returns a table of details about each pair of units that need the combat ratio display,""
+battle script commands (battle lua_State only),CreateUnitGroup,005CF230,,,,"Takes a table of unit address to build a group from, returns the id of the new group",""
+battle script commands (battle lua_State only),Crescent_Attack,005CF2D0,,,,,""
+battle script commands (battle lua_State only),Crescent_Envelop,005CF3A0,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Detonate_Fougasse_Basic,005CF470,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Detonate_Fougasse_Improved,005CF490,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Accuracy_Boost,005CF4B0,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Canister_Shottype,005CF500,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Carcass_Shottype,005CF550,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Deploy_Stakes,005CF5A0,,,,Currently selected units deploy stakes,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Diamond_Formation,005CF5C0,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Dismount,005CF610,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Explosive_Shell,005CF660,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Fire_And_Advance,005CF6B0,,,,Currently selected units enable/disable the fire and advance order.  Takes true or false.,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Fire_At_Will,005CF700,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Grenade_Shottype,005CF780,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Guard,005CF7D0,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Hot_Shottype,005CF820,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Improved_Grenades,005CF870,,,,Currently selected units select improved grenades.  Takes true or false.,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Inspire_Unit,005CF8C0,,,,Currently selected units try to rally nearby units.  Takes true or false.,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Light_Infantry_Behaviour,005CF910,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Limber,005CF960,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Loose_Formation,005CF9B0,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Melee,005CFA00,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Melee_Formation,005CFA70,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Percussive_Shell,005CFA90,,,,Currently selected units enable/disable percussive shells.  Takes true or false.,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Pike_Square_Formation,005CFAD0,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Pike_Wall_Formation,005CFB20,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Plug_Bayonets,005CFB70,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Prone_Formation,005CFBC0,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Quicklime_Shottype,005CFC10,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_ROF_Boost,005CFC60,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Ring_Bayonets,005CFA70,,,,Currently selected units enable/disable ring bayonets.  Takes true or false.,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Rockets_Shottype,005CFCB0,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Shot_Shottype,005CFD00,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Shrapnel_Shottype,005CFD50,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Skirmish,005CFDA0,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Spike,005CFA70,,,,Currently selected units perform the spike order,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Square_Formation,005CFDF0,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Enable_Wedge_Formation,005CFE40,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Halt,005CDFD0,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Increase_File,005CFE90,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Increase_File_Proxy,005CFED0,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Increase_Rank,005CFEE0,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Increase_Rank_Proxy,005CFF10,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Move_Backwards,005CFF20,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Move_Backwards_Proxy,005CFF50,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Move_Forwards,005CFF90,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Move_Forwards_Proxy,005CFF50,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Proxy_Rotate_Left,005CFFE0,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Proxy_Rotate_Right,005D0020,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Proxy_Turn_Left,005CFFE0,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Proxy_Turn_Right,005D0020,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Rally_Units,005D0060,,,,Currently selected units try to rally nearby units.  Takes true or false.,""
+battle script commands (battle lua_State only),Current_Selection_Rotate_Left,005D0080,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Rotate_Right,005D00F0,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Runs,005D0160,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Special_ability,00461180,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Turn_Left,005D0180,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Turn_Right,005D0200,,,,,""
+battle script commands (battle lua_State only),Current_Selection_Walks,005D0280,,,,,""
+battle script commands (battle lua_State only),CycleBattleSpeed,005D02A0,,,,Returns the current time multiplier of the battle,""
+battle script commands (battle lua_State only),Decrease_Sail,005D0390,,,,,""
+battle script commands (battle lua_State only),DeploymentFinishYesStart,005D0470,,,,Returns true if we're in conflict mode,""
+battle script commands (battle lua_State only),DestroyUnitGroup,005D04A0,,,,Takes the id of a unit group as returned by the create function and removes it from the game,""
+battle script commands (battle lua_State only),DisableChevaux,005D05B0,,,,DisableChevaux,""
+battle script commands (battle lua_State only),DisableEarthworks,005D05C0,,,,Retrieve the current width and height of the screen,""
+battle script commands (battle lua_State only),DisableFougasse,005D05D0,,,,Retrieve the current width and height of the screen,""
+battle script commands (battle lua_State only),DisableFougasseImproved,005D05E0,,,,Retrieve the current width and height of the screen,""
+battle script commands (battle lua_State only),DisableGabionade,005D05F0,,,,DisableGabionade,""
+battle script commands (battle lua_State only),DismissCurrentAdvice,007910B0,,,,Dismisses the current advice on the c++ side,""
+battle script commands (battle lua_State only),Double_Line_Screened,005D0600,,,,,""
+battle script commands (battle lua_State only),Double_Line_Standard,005D06D0,,,,,""
+battle script commands (battle lua_State only),DropInInterface,005D07A0,,,,Out: Should always return null pointer as it shouldn't be used.  Only included for the sake of generic code,""
+battle script commands (battle lua_State only),ElapsedBattleTime,005D07D0,,,,Returns the current time in seconds,""
+battle script commands (battle lua_State only),EnableChevaux,005D0800,,,,EnableChevaux,""
+battle script commands (battle lua_State only),EnableEarthworks,005D0810,,,,Retrieve the current width and height of the screen,""
+battle script commands (battle lua_State only),EnableFougasse,005D0820,,,,Retrieve the current width and height of the screen,""
+battle script commands (battle lua_State only),EnableFougasseImproved,005D0830,,,,Retrieve the current width and height of the screen,""
+battle script commands (battle lua_State only),EnableGabionade,005D0840,,,,EnableGabionade,""
+battle script commands (battle lua_State only),EnableShortcutHandler,005D0850,,,,In: true/false to enable/disable all keyboard shortcuts,""
+battle script commands (battle lua_State only),EnableVoiceChat,005D0890,,,,In: true/false to start/stop voice chat,""
+battle script commands (battle lua_State only),EntityDisplayInterface,005D08F0,,,,Out: Returns a pointer to the EntityDisplay,""
+battle script commands (battle lua_State only),EnumerateBattleReplays,005D0940,,,,"In: replay directory, file extention.  Out: Table of details about each replay file found in the directory",""
+battle script commands (battle lua_State only),ExitBattle,005D0980,,,,set to normal tick speed and finishes the battle,""
+battle script commands (battle lua_State only),ExplicitlyCancelMouseHeld,005D0990,,,,forces to UI to think the mouse left button is no longer held. Used when a panel is open that takes focus,""
+battle script commands (battle lua_State only),Ffwd,005D09B0,,,,,""
+battle script commands (battle lua_State only),FileExtenstionAndPathForWriteClass,005D09D0,,,,"In: string identifying OSFS_WRITECLASS.  Out: File extension used by that class, directory files are kept in",""
+battle script commands (battle lua_State only),FindImagePath,005D0AE0,,,,Tells us what the currently selected Ui skin is (which should equate to the sub-folder used,""
+battle script commands (battle lua_State only),Fire_At_Will,005D0C00,,,,,""
+battle script commands (battle lua_State only),Fwd,005D0C50,,,,,""
+battle script commands (battle lua_State only),GetHealthStatus,005D0C70,,,,Update the killometer bar,""
+battle script commands (battle lua_State only),Go_Straight,005D0CB0,,,,,""
+battle script commands (battle lua_State only),HasEnteredDeployment,005D0CD0,,,,Returns true if we're in deployment (not default deployment) mode,""
+battle script commands (battle lua_State only),Increase_Sail,005D0D10,,,,,""
+battle script commands (battle lua_State only),InformAdviceReachedRender,007910D0,,,,repeat the curently played advice,""
+battle script commands (battle lua_State only),InformOfBattleSummaryDismiss,005D0DF0,,,,local player has dismissed the summary,""
+battle script commands (battle lua_State only),InformOfDeploymentCountdownBegun,005D0E00,,,,local player has dismissed the summary,""
+battle script commands (battle lua_State only),InformOfDeploymentFinished,005D0E30,,,,local player has dismissed the summary,""
+battle script commands (battle lua_State only),IsAudioPlaying,00791110,,,,repeat the curently played advice,""
+battle script commands (battle lua_State only),IsCampaignBattle,005D0E40,,,,Out: True if this battle was started from the campaign map,""
+battle script commands (battle lua_State only),IsConflict,005D0E70,,,,Returns true if we're in conflict mode,""
+battle script commands (battle lua_State only),IsDeploymentOrConflict,005D0EB0,,,,Returns true if we're in conflict mode,""
+battle script commands (battle lua_State only),IsMinimisedHUD,005D0F20,,,,If it's minimised HUD,""
+battle script commands (battle lua_State only),IsMultiplayer,005D0FC0,,,,Out: True if this is a multiplayer battle,""
+battle script commands (battle lua_State only),IsReplay,005D1000,,,,If it's a replay,""
+battle script commands (battle lua_State only),IsSpectator,005D1040,,,,If it's a spectator,""
+battle script commands (battle lua_State only),IsTimedMultiplayerGame,005D0FC0,,,,,""
+battle script commands (battle lua_State only),IsTutorial,005D10A0,,,,Out: true if we are running a tutorial battle,""
+battle script commands (battle lua_State only),IsUnitSelectable,005D10D0,,,,checks if a unit is selectable,""
+battle script commands (battle lua_State only),Land_Unit_Withdraw,005D1150,,,,,""
+battle script commands (battle lua_State only),Line_Abreast,005D1170,,,,,""
+battle script commands (battle lua_State only),Line_Astern,005D1240,,,,,""
+battle script commands (battle lua_State only),ListOfPlayersInGame,005D1310,,,,Out: A table of the players,""
+battle script commands (battle lua_State only),LocalisationString,005D1680,,,,Retrieve a string from the random localisation strings table,""
+battle script commands (battle lua_State only),MPOnlinePresence,005D1710,,,,Out: Pointer to the online presence that exists in game core,""
+battle script commands (battle lua_State only),MPRematchVotes,005D1750,,,,Gets the current number of votes to have a rematch,""
+battle script commands (battle lua_State only),MPRestartPossible,005D1790,,,,If someone left the lobby then we can't restart,""
+battle script commands (battle lua_State only),MPRestartSwappedPossible,005D17D0,,,,If someone left the lobby then we can't restart,""
+battle script commands (battle lua_State only),MPResultsReady,005D1810,,,,Checks to see if the MP battle results have been collected,""
+battle script commands (battle lua_State only),MPSwapVotes,005D1860,,,,Gets the current number of votes to swap sides,""
+battle script commands (battle lua_State only),MPVoteRestart,005D18A0,,,,Player votes,""
+battle script commands (battle lua_State only),MPVotingComplete,005D18D0,,,,Checks for everyone having voted,""
+battle script commands (battle lua_State only),MouseMovedOffCard,005D1940,,,,Notify the game that unit selection has changed,""
+battle script commands (battle lua_State only),MouseMovedOntoCard,005D1960,,,,Notify the game that mouse has moved over this card,""
+battle script commands (battle lua_State only),Move_Camera,00857CA0,,,,Move Camera,""
+battle script commands (battle lua_State only),Move_Selection_To_Rader_Location,00857E50,,,,Move Camera,""
+battle script commands (battle lua_State only),MultiplayerBaseInterface,005D19D0,,,,Out: Pointer to the multiplayer control module (to be passed to UIMPInterface object,""
+battle script commands (battle lua_State only),Naval_Unit_Withdraw,005D1150,,,,,""
+battle script commands (battle lua_State only),NextAdvice,00791160,,,,display the next piece of advice,""
+battle script commands (battle lua_State only),NextAvailableGroupID,005D1A10,,,,Takes the id of a unit group as returned by the create function and removes it from the game,""
+battle script commands (battle lua_State only),NotifyCameraControlsChanged,005D1AA0,,,,this is for lua to change the camera (key controls handled by shortcut handler,""
+battle script commands (battle lua_State only),NotifyUIOptionsChanged,005D1AC0,,,,this is for lua to change the camera (key controls handled by shortcut handler,""
+battle script commands (battle lua_State only),NumHumansRequestingNextPhase,005D1CA0,,,,the number of Human players Requesting Next battle Phase,""
+battle script commands (battle lua_State only),Pause,005D1CE0,,,,,""
+battle script commands (battle lua_State only),Play,005D1D00,,,,,""
+battle script commands (battle lua_State only),PostBattleDismissContinueBattle,005D1D20,,,,local player has dismissed the summary,""
+battle script commands (battle lua_State only),PostBattleDismissEndBattle,005D1D30,,,,local player has dismissed the summary,""
+battle script commands (battle lua_State only),PostBattleInfo,005D1D40,,,,Fetches the post battle info from the game and Alexs' MP API,""
+battle script commands (battle lua_State only),PreviousAdvice,00791180,,,,display the previous piece of advice,""
+battle script commands (battle lua_State only),Ram,005D2F60,,,,,""
+battle script commands (battle lua_State only),ReleaseMouseCursorInterrupt,005D2F80,,,,forces to UI to think the mouse left button is no longer held. Used when a panel is open that takes focus,""
+battle script commands (battle lua_State only),RemainingTimeToDrop,005D2F90,,,,Out: True if this is a multiplayer battle,""
+battle script commands (battle lua_State only),RemoveUnitsFromGroup,005D2FE0,,,,"Takes a table of unit addresses, and removes the units from the group they are in",""
+battle script commands (battle lua_State only),Repair,005D3080,,,,,""
+battle script commands (battle lua_State only),RepeatAdvice,007911A0,,,,repeat the curently played advice,""
+battle script commands (battle lua_State only),Repel,005D30A0,,,,,""
+battle script commands (battle lua_State only),RequestMouseInterruptType,005D30C0,,,,forces to UI to think the mouse left button is no longer held. Used when a panel is open that takes focus,""
+battle script commands (battle lua_State only),ResizeMinimap,00857F00,,,,Fetches the post battle info from the game and Alexs' MP API,""
+battle script commands (battle lua_State only),RetrieveGameCore,005D3110,,,,Out: Returns pointers to the game core so that a UIPrefsInterface object can be initialised,""
+battle script commands (battle lua_State only),SaveReplay,005D3150,,,,In: battle replay file name,""
+battle script commands (battle lua_State only),ScreenSize,005D3280,,,,Retrieve the current width and height of the screen,""
+battle script commands (battle lua_State only),SelectAllArtillery,005D32F0,,,,select units of this type,""
+battle script commands (battle lua_State only),SelectAllCavalry,005D3310,,,,select units of this type,""
+battle script commands (battle lua_State only),SelectAllInfantry,005D3330,,,,select units of this type,""
+battle script commands (battle lua_State only),SelectAllMelee,005D3350,,,,select units of this type,""
+battle script commands (battle lua_State only),SelectUnitBasedOnUnitType,005D3370,,,,Change the selection based on a unit class,""
+battle script commands (battle lua_State only),SelectionChanged,005D3410,,,,Notify the game that unit selection has changed,""
+battle script commands (battle lua_State only),SetSelectionProxy,005D3430,,,,Takes the address of the entity (ship/unit) and a boolean flag and sets the proxy display for that entity as appropriate,""
+battle script commands (battle lua_State only),Shot_Chain,005D3630,,,,,""
+battle script commands (battle lua_State only),Shot_Grape,005D3650,,,,,""
+battle script commands (battle lua_State only),Shot_Waterline,005D3670,,,,,""
+battle script commands (battle lua_State only),ShowVoiceChat,005D3690,,,,Returns whether voice chat can be displayed,""
+battle script commands (battle lua_State only),Single_Line_Cavalry_Left_Flank,005D36E0,,,,,""
+battle script commands (battle lua_State only),Single_Line_Cavalry_Right_Flank,005D37B0,,,,,""
+battle script commands (battle lua_State only),Single_Line_Standard,005D3880,,,,,""
+battle script commands (battle lua_State only),Slow,005D3950,,,,,""
+battle script commands (battle lua_State only),SquadInfoByPointer,005D3970,,,,Notify the game that mouse has moved over this card,""
+battle script commands (battle lua_State only),Stop_Rotating_Rendering,005D3A80,,,,,""
+battle script commands (battle lua_State only),TickPeriod,005D3AA0,,,,Returns the current time multiplier of the battle,""
+battle script commands (battle lua_State only),Time,005D3BB0,,,,Returns the current time in seconds,""
+battle script commands (battle lua_State only),ToggleMinimisedCards,005D3BF0,,,,Toggles cards on and off,""
+battle script commands (battle lua_State only),ToggleMinimisedOrders,005D3C60,,,,Toggles orders on and off,""
+battle script commands (battle lua_State only),ToggleMinimisedRadar,005D3CD0,,,,Toggles radar on and off,""
+battle script commands (battle lua_State only),ToggleMusic,005D3D40,,,,Toggles Music on and off,""
+battle script commands (battle lua_State only),ToggleSFX,005D3DA0,,,,Toggles SFX on and off,""
+battle script commands (battle lua_State only),ToggleShipFiringArcs,005D3E30,,,,Toggle the display of ship firing arcs,""
+battle script commands (battle lua_State only),TriggerAdviceForPanel,005D3E40,,,,In: Name of panel,""
+battle script commands (battle lua_State only),TriggerMessageDropEvent,005D3EE0,,,,Plays the sound that occurs when a message hits the bottom of the msg stack,""
+battle script commands (battle lua_State only),TriggerMessageOpenedEvent,005D3F70,,,,In: Message id,""
+battle script commands (battle lua_State only),TriggerPanelClosedEvent,005D40B0,,,,In: Name of panel,""
+battle script commands (battle lua_State only),TriggerPanelOpenEvent,005D4170,,,,In: Name of panel,""
+battle script commands (battle lua_State only),Triple_Line_Grand_Battery,005D4250,,,,,""
+battle script commands (battle lua_State only),Triple_Line_Integrated_Artillery,005D4320,,,,,""
+battle script commands (battle lua_State only),Triple_Line_Standard,005D43F0,,,,,""
+battle script commands (battle lua_State only),UILocalisationString,00479520,,,,Retrieve a string from the ui.loc file,""
+battle script commands (battle lua_State only),UISkin,005D44C0,,,,Tells us what the currently selected Ui skin is (which should equate to the sub-folder used,""
+battle script commands (battle lua_State only),UnitListForBattleIds,005D44F0,,,,Out: Returns a list of BattleUnit instances representing all units in the battle that need a battle id displaying,""
+battle script commands (battle lua_State only),UnitScaleFactor,005D48C0,,,,"In: (Opt) current scale factor, Out: float value representing current unit scale, index into scale factors list : 0-3",""
+battle script commands (battle lua_State only),UpdateBattleLocks,005D4960,,,,Updates the battle sequences if any are appropriate for this battle,""
+battle script commands (battle lua_State only),Valid,005D4B60,,,,Is the UI open,""
+battle script commands (battle lua_State only),WindDirection,005D4B90,,,,Update the wind pointer,""
+battle script commands (battle lua_State only),WindowsTime,005D4BF0,,,,Returns the current time in seconds,""
+battle script commands (battle lua_State only),ZoomToAdviceLocation,007911C0,,,,Moves the camera the current advice on the c++ side,""
+battle script commands (battle lua_State only),ZoomToGeneral,005D4C40,,,,checks if a unit is selectable,""
+battle script commands (battle lua_State only),ZoomToUnit,005D4D60,,,,Zoom the camera over to a particular unit,""
+battle script commands (battle lua_State only),show_allied_units_proxies,005D4EB0,,,,,""
+frontend / menu commands,AreFriendsStatsDownloading,0046A4B0,,,,Out: true/false if the stats are downloading or not,""
+frontend / menu commands,ArmyFundsForSize,0046A4F0,,,,In: Integer value representing size of army (0-2).  bool: is naval.  Out: Allowed funds for that size,""
+frontend / menu commands,BattleMapDetailsFromPreviousSetup,0046A550,,,,In: Pointer to a battle setup object.  Out: Table of details about the setups map,""
+frontend / menu commands,BattleTypeString,0046A660,,,,"In: string identifying a battle type, Out: Localised form of that string",""
+frontend / menu commands,BattleTypesFilterString,0046A730,,,,Out: Enumerate supported battle types in a form suited for a dropdown list,""
+frontend / menu commands,BattleWeatherAndTimeOfDayOptionsString,0046A860,,,,"In: Battle record key, Out: Dropdown menu formated options strings for weather and time of day",""
+frontend / menu commands,BuildCpuName,0046AFB0,,,,In: cpu id number.  Out: Formatted name string,""
+frontend / menu commands,BuildCredits,0046B100,,,,In: Parent Component.  Out: Height of all the credits. Credits file will be parsed and added as children to the parent,""
+frontend / menu commands,BuildInfoSetup,0046BA90,,,,Builds a table of information required by the UIBattleSetupObject,""
+frontend / menu commands,CampaignDetails,0046BCC0,,,,Retrieves various details about the specified campaign,""
+frontend / menu commands,CampaignSavesExist,0046CE60,,,,Out: Flag to indicate whether any campaign save games exist on disk,""
+frontend / menu commands,CancelHostedGame,0046CEB0,,,,Cancel the hosted game,""
+frontend / menu commands,ClearPreviousSetup,0046CED0,,,,Clears any previous battle setup,""
+frontend / menu commands,CloseMapDataFile,0046CEF0,,,,,""
+frontend / menu commands,ContinueCampaign,0046CF00,,,,Load the most recently saved campaign game,""
+frontend / menu commands,DefaultPrefsForBattle,0046CF60,,,,"In: xml file battle specification. Out: Table of details about season, time of day and weather",""
+frontend / menu commands,DropInInterface,0046D300,,,,Out: Pointer to a dropin interface to be passed to UIMPInterface object,""
+frontend / menu commands,EnableCreditScreenMusic,0046D360,,,,In: boolean,""
+frontend / menu commands,EnableVoiceChat,0046D3B0,,,,In: true/false to start/stop voice chat,""
+frontend / menu commands,EnumerateArmySetups,0046D410,,,,"In: Directory, file extension, Current era, current army size, current_unit_limit (from unit scale), allowed factions. Out: Lists unit saves that are complient with the settings provided",""
+frontend / menu commands,EnumerateBattleMaps,0046D7C0,,,,Find all the battle maps of a given type,""
+frontend / menu commands,EnumerateBattleReplays,0046D930,,,,"In: replay directory, file extention.  Out: Table of details about each replay file found in the directory",""
+frontend / menu commands,EnumerateCampaignSaves,0046D970,,,,"In: Save game directory, file extension, Out: Table of details about each save game found in the directory",""
+frontend / menu commands,EnumerateCampaigns,0046D990,,,,In: Boolean - Enumerate episodic campaigns (or grand campaigns)? Out: Table of details about each episodic campaign available,""
+frontend / menu commands,EnumerateMultiplayerCampaignSaves,0046DFB0,,,,"In: Save game directory, file extension, Out: Table of details about each save game found in the directory",""
+frontend / menu commands,EnumerateNapoleonsBattleMaps,0046DFF0,,,,Find all the battle maps of a given type,""
+frontend / menu commands,EnumerateNapoleonsCampaigns,0046E1A0,,,,Out: Table of details about each of napoleons campaigns,""
+frontend / menu commands,FactionDetails,0046E950,,,,"In: Faction key (string), era enum Out: Details from the faction record",""
+frontend / menu commands,FactionListForBattles,0046EB10,,,,"In: IsNaval (boolean), era value (0,1), Out: List of details about all factions defined in the database that have mp_available set to true",""
+frontend / menu commands,FileExtenstionAndPathForWriteClass,0046EE50,,,,"In: string identifying OSFS_WRITECLASS.  Out: File extension used by that class, directory files are kept in",""
+frontend / menu commands,FormatMinutesString,0046F020,,,,"In: number of minutes, Out: Format time string (%d minutes",""
+frontend / menu commands,FrontEnd,0046F0F0,,,,Out: Returns a pointer to the frontend object,""
+frontend / menu commands,FullUnitInformation,0046F130,,,,"In: Unit record key, faction record key, is_late_era, Out: Information about that unit that is required for the unit information panel",""
+frontend / menu commands,GameVersion,0046F940,,,,Out: Current game version number,""
+frontend / menu commands,GenerateRegionOwnershipMaps,0046F990,,,,"In: Table of expected theatres, Campaign key, Faction key (opt: faction 2 key), Out: Table of images depicting region ownership for that faction in each theatre",""
+frontend / menu commands,GenerateShipName,00470430,,,,"In: Faction, unit class.  Out: A randomly generated ship name string",""
+frontend / menu commands,GetExtendedMPSaveGameInfo,004704D0,,,,"In: Path to save game, Out: Table of extra details about that save game",""
+frontend / menu commands,GetExtendedSaveGameInfo,004705E0,,,,"In: Path to save game, Out: Table of extra details about that save game",""
+frontend / menu commands,GetWaterlooBattleDetails,004706F0,,,,"OUt: title, description, specification and unlock status of the waterloo battle",""
+frontend / menu commands,ListOfPlayersInGame,00470840,,,,Get list of players ,""
+frontend / menu commands,LoadArmySetup,004708A0,,,,"In: Path of file to load, Out: Table of army details",""
+frontend / menu commands,LoadBattleReplay,00470990,,,,In: Path to replay to load,""
+frontend / menu commands,LoadBattleSetup,004709F0,,,,In: Filename to load.  Out: Table of preferences and army lists or nil on failure,""
+frontend / menu commands,LoadCampaign,00471520,,,,In: Path to campaign file to load,""
+frontend / menu commands,LocalPlayerName,00471570,,,,Out: Retrieve the name of the player,""
+frontend / menu commands,LocalisationString,004715E0,,,,Retrieve a string from the random localisation strings table,""
+frontend / menu commands,LocalisedGameTypeString,004716E0,,,,"In: Selected Campaign victory condition type (1 based), Out: Localised string for that game type",""
+frontend / menu commands,MPCampaignEnabled,00471750,,,,Out: Returns true if mp campaign is enabled,""
+frontend / menu commands,MPCampaignSavesExist,00471770,,,,Out: Flag to indicate whether any multiplayer campaign save games exist on disk,""
+frontend / menu commands,MPCanCancelQuickBattle,004717C0,,,,Out: Returns whether we have passed the point of no return when looking for quick battles,""
+frontend / menu commands,MPChangeRoom,00471830,,,,In: Room id,""
+frontend / menu commands,MPCurrentGameDetails,00471860,,,,"Out: Details of the current game (preferences as set by host), or nil if not in a game",""
+frontend / menu commands,MPExperienceTables,00472330,,,,"In: bool to specify land/naval battle modifiers (true if naval), Out: Table of fixed cost, multiplier tables for experience levels 0-9",""
+frontend / menu commands,MPGameInfoList,004726D0,,,,"In: boolean, battle or campaign.  Out: Table of details for all the mp games active for that mode, for the time being, in a single room",""
+frontend / menu commands,MPHasGameInvite,004735A0,,,,Out: Returns true if there is a game invite pending,""
+frontend / menu commands,MPHasLobby,00473600,,,,,""
+frontend / menu commands,MPHostCampaign,00473650,,,,"In: Game name and password, year and season. Out: Boolean success value",""
+frontend / menu commands,MPHostCustomBattle,00473920,,,,"In: Table containing: Game map path, map_name, game name, password, max_players, ranked, customise_armies, battle type, army_size (as int).  Hosts a battle.",""
+frontend / menu commands,MPInterface,004741D0,,,,Out: Pointer to the multiplayer control module (to be passed to UIMPInterface object,""
+frontend / menu commands,MPInviteToGame,00474210,,,,In: Array of Steam Player Id's.,""
+frontend / menu commands,MPIsJoiningByInvite,004742E0,,,,"Out: Boolean, are we joining a game via an invite in online mode (false if lan), nil if not joining on",""
+frontend / menu commands,MPIsOnline,00474330,,,,"Out: Boolean, are we logged on in online mode (false if lan), nil if not logged on",""
+frontend / menu commands,MPJoinGame,00474380,,,,"In: index, password, join the multiplayer game with the specified index.  Password string can be empty",""
+frontend / menu commands,MPJoinInvitedGame,004744D0,,,,"In: password. Out: True/false join success.  If false then true/false if failed due to needing a password, followed by error message",""
+frontend / menu commands,MPLocalPlayerHosting,004747F0,,,,Out: True if the local player is hosting the current game or not,""
+frontend / menu commands,MPLocalPlayerId,00474870,,,,Out: Steam id for local player,""
+frontend / menu commands,MPLocalPlayerInLobby,004748D0,,,,,""
+frontend / menu commands,MPLocalPlayerStats,00474940,,,,Out: A table with lots of information about the local player used by the stats screen,""
+frontend / menu commands,MPLogOn,00475450,,,,In: Lan mode (true|false). Log on to multiplayer. Out: Result code,""
+frontend / menu commands,MPLogOut,004754A0,,,,Log out of multiplayer.  Returns true or false on success,""
+frontend / menu commands,MPOnlinePresence,004754E0,,,,Out: Pointer to the online presence that exists in game core,""
+frontend / menu commands,MPQuickBattleCancel,00475530,,,,Cancels any quick battle matchmaking,""
+frontend / menu commands,MPQuickBattleDetails,00475570,,,,"Out: Table of details about the quick battle matchmaking process, or nil if matchmaking complete",""
+frontend / menu commands,MPQuickBattleSearchRange,00475610,,,,Out: Min and max skill values currently being used for quick battle searches,""
+frontend / menu commands,MPQuickBattleStart,00475660,,,,In: Boolean to specify whether it should be a land battle or not,""
+frontend / menu commands,MPReadyForLogOn,00475790,,,,"In: bool (true = online, false = lan) Out: true/false if the multiplayer system is ready for action",""
+frontend / menu commands,MaxUnitsFromUnitScaleFactor,00475800,,,,"In: Current unit scale index (int).  Out: Max land units, max naval units",""
+frontend / menu commands,MoviePlaying,00475860,,,,Out: Boolean - is a movie still playing,""
+frontend / menu commands,MultiplayerBaseInterface,00475890,,,,Out: Pointer to the multiplayer control module (to be passed to UIMPInterface object,""
+frontend / menu commands,OpenMapDataFile,004758E0,,,,"In: Campaign name, Out: Start date and season for that campaign.  Opens the basic information about the specified campaign if it hasn't opened it already!",""
+frontend / menu commands,PlayMovieInComponent,00475970,,,,"In: movie to play, component to attach movie to",""
+frontend / menu commands,PreviousBattleSetup,00475A50,,,,"Out: Pointer to a previous battle setup and true/false if this is a special napoleonic battle, or nil if there are no previous details stored",""
+frontend / menu commands,PreviousGameType,00475AB0,,,,"Out: Enum value. -1 = none, 0 = battle, 1 = campaign, 2 = episodic campaign",""
+frontend / menu commands,Quit,00475AE0,,,,Quit,""
+frontend / menu commands,RecruitableUnits,00475B00,,,,"In: faction key (string), naval battle (bool), era (int), category mask (bitflag to hide various mp categories) Out: Table of details about units that are useable by the faction",""
+frontend / menu commands,ResumeFrontEndMovie,00476560,,,,Should only be used if the frontend movie has been previously paused,""
+frontend / menu commands,ResumeMultiplayerCampaign,00476570,,,,In: Path to save game.  Will attempt to resume host a multiplayer campaign,""
+frontend / menu commands,RetrieveArmyPresets,004765F0,,,,"In: Faction, battle type, army size, and era Out: Table of unit presets for each weighting type",""
+frontend / menu commands,RetrieveFriendsStats,00477780,,,,Out: Array of friends and their rankings,""
+frontend / menu commands,RetrieveGameCore,00477C90,,,,Out: Returns pointers to the game core so that a UIPrefsInterface object can be initialised,""
+frontend / menu commands,RetrieveRandomPortraitPath,00477CD0,,,,"In: Faction key, is_admiral, Out: Card path to a randomly assigned portrait",""
+frontend / menu commands,SaveArmySetup,00477F50,,,,"In: Table of details about units, file path to save to (optional) bool to specify if existing files should be overwritten (false by default)",""
+frontend / menu commands,SaveBattleSetup,00478100,,,,"In: Table about map details, preferences, and army setups for each player in the battle. Path to save. (Optional) Boolean - overwrite existing files (false by default). Out: Overwrite == false -> bool, bool (files exists, save success), overwrite == true -> bool (save success)",""
+frontend / menu commands,ScreenSize,00478250,,,,Retrieve the current width and height of the screen,""
+frontend / menu commands,SetCurrentGameType,004782B0,,,,"In: Number relating to game type being played. 1 = Battle, 2 = Campaign, 3 = Episodic, 4 = Tutorial",""
+frontend / menu commands,ShowDemoMovie,004782F0,,,,In: movie to show,""
+frontend / menu commands,ShowVoiceChat,00478380,,,,,""
+frontend / menu commands,SpanishCampaignEnabled,004783A0,,,,Out: true if the player has Wellington PDLC,""
+frontend / menu commands,StartBattle,004783E0,,,,"Takes a battle setup up (create one with UIBattleSetup(FrontEnd.BuildInfoSetup(battle_descr))), and a table of player info and starts the battle",""
+frontend / menu commands,StartCampaign,00478840,,,,"Starts the specified campaign.  Takes a campaign name, the faction to play as and a table of options (to be defined)",""
+frontend / menu commands,StartFriendStatsDownload,00478980,,,,Starts the downloading of friends stats from the steam network. Out: Success flag,""
+frontend / menu commands,StartTutorialBattle,00478A50,,,,"In: bool (true = land, false = naval)",""
+frontend / menu commands,StartTutorialCampaign,00478A80,,,,Starts the campaign tutorial (tut_napoleon),""
+frontend / menu commands,SteamFriendsList,00478AE0,,,,In: Bool - show clan members Out: List of details about appropriate friends listed on Steam,""
+frontend / menu commands,SteamNewContentAvailable,00478CF0,,,,Out: true/false depending on whether the player owns any of the content available,""
+frontend / menu commands,SteamOpenStore,00478F00,,,,Open the steam interface on the store screen,""
+frontend / menu commands,StopAllMovies,00478F30,,,,,""
+frontend / menu commands,StopDemoMovie,00478F40,,,,Stops the movie playing and restores the normal bg movie,""
+frontend / menu commands,StopFriendStatsDownload,00478F70,,,,Stops the downloading of friends stats from the steam network,""
+frontend / menu commands,TheatreList,00478FA0,,,,"In: Campaign key, Out: Table of details about each theatre in the campaign",""
+frontend / menu commands,TimeOfDayOptionsString,00479360,,,,Out: A string formatted for dropdown lists containing all the times of day supported by the game,""
+frontend / menu commands,TriggerMessageBoxOpenedEvent,00479440,,,,Fired when a message box in the frontend is shown,""
+frontend / menu commands,TriggerSliderUpdateEvent,00479460,,,,In: Slider name. Triggers some sliders have there value changed in the FE,""
+frontend / menu commands,UILocalisationString,00479520,,,,Retrieve a string from the ui.loc file,""
+frontend / menu commands,UnitScaleFactor,004795F0,,,,"In: (Opt) current scale factor, Out: float value representing current unit scale, index into scale factors list : 0-3",""
+frontend / menu commands,ValidateArmySetup,00479690,,,,In: Table of details about the units used in the setup,""
+frontend / menu commands,WindLevelOptionsString,0047A260,,,,Out:  A string formatted for dropdown lists containin all the wind levels supported by the game,""
+frontend / menu commands,navigate,0047A400,,,,,""
